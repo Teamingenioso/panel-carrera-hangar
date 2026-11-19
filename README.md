@@ -6,7 +6,9 @@ Muestra cuántos RPs del plan entregaron su reel, las vistas, me gusta, comentar
 
 ## Cómo verlo
 
-Abre `index.html` en el navegador. Funciona sin servidor y sin conexión: los datos y `d3.min.js` vienen en el repositorio.
+Web: https://teamingenioso.github.io/panel-carrera-hangar/
+
+O abre `index.html` en el navegador. Funciona sin servidor y sin conexión: los datos y `d3.min.js` vienen en el repositorio.
 
 ## Archivos
 
@@ -24,6 +26,6 @@ Abre `index.html` en el navegador. Funciona sin servidor y sin conexión: los da
 - Para 15 RPs de tier A, las capturas de estadísticas que ellos mismos mandaron el 19 de noviembre (entre 11:45 a. m. y 4:17 p. m.). Son los números de su propia cuenta.
 - Seguidores, siguiendo y publicaciones del perfil público de cada RP. Instagram redondea las cifras grandes.
 
-## Privacidad
+## Datos de personas
 
-El repositorio es privado: trae nombres, usuarios de Instagram y cifras de personas reales. No lo hagas público sin avisarles.
+El repositorio y su web son públicos. Traen nombres, usuarios de Instagram, seguidores y estadísticas de los RPs, incluidas las de las capturas que ellos mismos mandaron. Si un RP pide que se quite, se borra su renglón de `rps.json` y de `index.html`.
