@@ -42,7 +42,8 @@
     "nuevos_seguidores": 9,
     "tiempo_prom_s": 8
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Aritzy Morales",
@@ -115,7 +116,8 @@
     "nuevos_seguidores": 1,
     "tiempo_prom_s": 6
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m."
+   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
+   "tf_estado": "tarde"
   },
   {
    "rp": "Henry Azmitia",
@@ -157,7 +159,8 @@
     "nuevos_seguidores": 0,
     "tiempo_prom_s": 4
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Ingrid Domínguez",
@@ -244,7 +247,8 @@
      "tiempo_prom_s": 12
     }
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Karen Mayo",
@@ -287,7 +291,8 @@
     "tiempo_prom_s": 8,
     "nota": "Reel en colaboración con hangargymmx"
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m."
+   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
+   "tf_estado": "tarde"
   },
   {
    "rp": "Karla Miranda",
@@ -329,7 +334,8 @@
     "nuevos_seguidores": 2,
     "tiempo_prom_s": 7
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Luis Moscoso",
@@ -371,7 +377,8 @@
     "nuevos_seguidores": 3,
     "tiempo_prom_s": 10
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Luisa Castillo",
@@ -413,7 +420,8 @@
     "nuevos_seguidores": 5,
     "tiempo_prom_s": 9
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Miranda Becerra",
@@ -455,7 +463,8 @@
     "nuevos_seguidores": 10,
     "tiempo_prom_s": 7
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Nereyda Ramón",
@@ -515,7 +524,8 @@
     },
     "nota": "Mismo video publicado en TikTok e Instagram; vistas, likes, comentarios y compartidos suman las dos plataformas"
    },
-   "tf_motivo": "No tengo registrada la hora a la que mandó sus capturas."
+   "tf_motivo": "No tengo registrada la hora a la que mandó sus capturas.",
+   "tf_estado": "confirmar"
   },
   {
    "rp": "Nilka Castillo",
@@ -557,7 +567,8 @@
     "nuevos_seguidores": 12,
     "tiempo_prom_s": 8
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Regino Ortiz",
@@ -599,7 +610,8 @@
     "nuevos_seguidores": 1,
     "tiempo_prom_s": 11
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Rodrigo Morales",
@@ -641,7 +653,8 @@
     "nuevos_seguidores": 0,
     "tiempo_prom_s": 6
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Ximena Lara",
@@ -683,7 +696,8 @@
     "nuevos_seguidores": 35,
     "tiempo_prom_s": 11
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Yoana Zempoaltecatl",
@@ -725,7 +739,8 @@
     "nuevos_seguidores": 26,
     "tiempo_prom_s": 13
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Christopher Huerta",
@@ -767,7 +782,8 @@
     "nuevos_seguidores": 10,
     "tiempo_prom_s": 11
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Citlalli Marín",
@@ -840,7 +856,8 @@
     "nuevos_seguidores": 15,
     "tiempo_prom_s": 9
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Juan Andrés Acopa",
@@ -882,7 +899,8 @@
     "nuevos_seguidores": 1,
     "tiempo_prom_s": 9
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m."
+   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
+   "tf_estado": "tarde"
   },
   {
    "rp": "Karla Rosado",
@@ -955,7 +973,8 @@
     "nuevos_seguidores": 3,
     "tiempo_prom_s": 6
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m."
+   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
+   "tf_estado": "tarde"
   },
   {
    "rp": "Mia Sánchez",
@@ -1085,7 +1104,8 @@
     "fuente": "Capturas del reel y de su perfil enviadas por el RP (sin pantalla de estadísticas)",
     "hora": "14:29"
    },
-   "tf_motivo": "capturas de su perfil y del reel, sin la pantalla de estadísticas."
+   "tf_motivo": "capturas de su perfil y del reel, sin la pantalla de estadísticas.",
+   "tf_estado": "confirmar"
   },
   {
    "rp": "Angie Marcela",
@@ -1127,7 +1147,8 @@
     "nuevos_seguidores": 1,
     "tiempo_prom_s": 4
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Claudia Marín",
@@ -1170,7 +1191,8 @@
     "tiempo_prom_s": 9,
     "nota": "Reel en colaboración con hangargymmx"
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Cristian Tosca",
@@ -1213,7 +1235,8 @@
     "tiempo_prom_s": 9,
     "nota": "Reel en colaboración con hangargymmx"
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Daniela Alamilla",
@@ -1287,7 +1310,8 @@
     "tiempo_prom_s": 12,
     "nota": "Reel en colaboración con hangargymmx. La gráfica de sus capturas empieza el 11 nov y los números son mucho más altos que la lectura del 18 nov (4,399 views, 137 me gusta, 18 comentarios, 5 compartidos): falta confirmar que es el mismo reel."
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m."
+   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
+   "tf_estado": "tarde"
   },
   {
    "rp": "Scarlett",
@@ -1330,7 +1354,8 @@
     "tiempo_prom_s": 17,
     "nota": "Su link no abría; con las capturas se pudo leer el reel. La gráfica empieza el 9 nov y el panel tiene el 7 nov como fecha de publicación."
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m."
+   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
+   "tf_estado": "tarde"
   },
   {
    "rp": "Olga Chacón",
@@ -1372,7 +1397,8 @@
     "nuevos_seguidores": 0,
     "tiempo_prom_s": 10
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Valeria Aguirre",
@@ -1414,7 +1440,8 @@
     "nuevos_seguidores": 0,
     "tiempo_prom_s": 8
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Ferchis",
@@ -1456,7 +1483,8 @@
     "nuevos_seguidores": 0,
     "tiempo_prom_s": 15
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Fau",
@@ -1499,7 +1527,8 @@
     "tiempo_prom_s": 10,
     "nota": "Reel en colaboración con hangargymmx"
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m."
+   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
+   "tf_estado": "tarde"
   },
   {
    "rp": "Chris Hernández",
@@ -1603,7 +1632,8 @@
     "nuevos_seguidores": 0,
     "tiempo_prom_s": 4
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Brandon Su",
@@ -1832,7 +1862,8 @@
     "tiempo_prom_s": 5,
     "nota": "Reel en colaboración con hangargymmx"
    },
-   "a_tiempo_forma": true
+   "a_tiempo_forma": true,
+   "tf_estado": "ok"
   },
   {
    "rp": "Monserrat López",
@@ -1906,7 +1937,8 @@
     "tiempo_prom_s": 17,
     "nota": "Reel publicado hoy 19 nov (como a las 2:50 p. m., por la gráfica de la primera hora). No mandó link ni usuario; falta confirmar que es el reel de la campaña."
    },
-   "tf_motivo": "sin link ni usuario, falta confirmar que es el reel de la campaña."
+   "tf_motivo": "sin link ni usuario, falta confirmar que es el reel de la campaña.",
+   "tf_estado": "confirmar"
   },
   {
    "rp": "Vanessa Rivera",
@@ -2068,7 +2100,8 @@
     "hora": "13:55",
     "nota": "Mandó una sola captura, la pantalla de me gusta y views: 4 me gusta y 47 views, sin la pantalla de estadísticas. No muestra fecha ni link; falta confirmar que es el reel de la campaña."
    },
-   "tf_motivo": "solo la pantalla de me gusta y views, sin la pantalla de estadísticas."
+   "tf_motivo": "solo la pantalla de me gusta y views, sin la pantalla de estadísticas.",
+   "tf_estado": "confirmar"
   }
  ],
  "meta": [
@@ -2098,7 +2131,7 @@
   },
   {
    "label": "En tiempo y forma",
-   "value": "22 de los 33 RPs que mandaron capturas lo hicieron en tiempo y forma (13 de tier A, 2 de tier B, 5 de tier C y 2 de tier D): capturas de estadísticas enviadas el 19 nov antes de las 4:00 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado. Quedan sin marca por mandar después de las 4:00 p. m.: Eli, Lilia, Scarlett, Miranda Hernández, Faumery, Juan Andrés y Karen Mayo; por mandar capturas incompletas o sin confirmar: Vianey, Anahí, Paloma y Nereyda (sin hora registrada)."
+   "value": "22 de los 33 RPs que mandaron capturas lo hicieron en tiempo y forma (13 de tier A, 2 de tier B, 5 de tier C y 2 de tier D): capturas de estadísticas enviadas el 19 nov antes de las 4:00 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado. Sin esta marca no se participa en el premio. Quedan sin marca por mandar después de las 4:00 p. m.: Eli, Lilia, Scarlett, Miranda Hernández, Faumery, Juan Andrés y Karen Mayo; por mandar capturas incompletas o sin confirmar: Vianey, Anahí, Paloma y Nereyda (sin hora registrada)."
   }
  ]
 }
