@@ -135,12 +135,12 @@ html.hg-lock,html.hg-lock body{overflow:hidden!important}
 .hg .gz h5:first-child{margin-top:0}
 .hg .gz p{margin:0 0 8px;color:rgba(255,255,255,.86)}
 .hg .chip.red{border-color:#ff6b5a;color:#ff6b5a}
-.hg .tf{display:inline-block;flex:none;margin-left:6px;width:1.15em;height:1.15em;line-height:1.15em;border-radius:50%;background:var(--yellow);color:#000;font-size:calc(.68*var(--u));font-weight:800;text-align:center;font-style:normal;vertical-align:middle}
-.hg .tag.tf{width:auto;height:auto;line-height:normal;margin:0 0 0 6px;padding:3px 10px;border-radius:999px;font-size:calc(.66*var(--u));letter-spacing:.08em;background:var(--yellow);color:#000;border-color:var(--yellow)}
-.hg .chip.tfc{border-color:var(--yellow);color:var(--yellow)}
-.hg .chip.tfc.on{background:var(--yellow);color:#000}
+.hg .tf{display:inline-flex;align-items:center;justify-content:center;flex:none;margin-left:6px;width:calc(1.25*var(--u));height:calc(1.25*var(--u));line-height:1;border-radius:50%;background:transparent;border:1.5px solid var(--ok);color:var(--ok);font-size:calc(.66*var(--u));font-weight:800;font-style:normal;vertical-align:middle}
+.hg .tag.tf{display:inline-block;width:auto;height:auto;line-height:normal;margin:0 0 0 6px;padding:3px 10px;border-radius:999px;font-size:calc(.66*var(--u));font-weight:700;letter-spacing:.08em;background:transparent;color:var(--ok);border:1px solid var(--ok)}
+.hg .chip.tfc{border-color:var(--ok);color:var(--ok)}
+.hg .chip.tfc.on{background:var(--ok);border-color:var(--ok);color:#000}
 .hg .tfn{margin:6px 0 0;color:rgba(255,255,255,.62);font-size:calc(.8*var(--u))}
-.hg .tfn.ok{color:var(--yellow)}
+.hg .tfn.ok{color:var(--ok)}
 .hg .tag.w{border-color:rgba(255,255,255,.55);color:#fff}
 .hg .rk .nm{display:flex;align-items:center;min-width:0}
 .hg .rk .nm .lk{flex:0 1 auto;min-width:0}
@@ -233,7 +233,7 @@ html.hg-lock,html.hg-lock body{overflow:hidden!important}
 @media (prefers-reduced-motion:reduce){.hg .chart .pulse{display:none}}
 
 /* ===== escala por tamaño de pantalla ===== */
-.hg{--k:1;--u:calc(16px * var(--k));font-size:var(--u);-webkit-text-size-adjust:100%;text-size-adjust:100%;
+.hg{--ok:#5ed283;--k:1;--u:calc(16px * var(--k));font-size:var(--u);-webkit-text-size-adjust:100%;text-size-adjust:100%;
   max-width:calc(1100px * var(--k));
   padding:max(20px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(28px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
 @media (min-width:1440px){.hg{--k:1.1}}
