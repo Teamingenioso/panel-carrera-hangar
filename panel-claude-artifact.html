@@ -1,0 +1,1044 @@
+<meta name="dash-one-writer">
+<style>
+#dash-root{--dash-gutter:0;background:#0a0a0a}
+.hg{--black:#0a0a0a;--raise:#131313;--yellow:#f5d400;--dim:#8f7c00;--line:rgba(255,255,255,.14);--mute:rgba(255,255,255,.62);
+  background:var(--black);color:#fff;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;padding:20px 16px 28px;line-height:1.45;font-variant-numeric:tabular-nums;max-width:1100px;margin:0 auto}
+.hg{position:relative}
+.hg *{box-sizing:border-box}
+.hg a{color:inherit}
+.hg .hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.hg .logo{height:26px;width:auto;display:block}
+.hg .kick{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--yellow);display:flex;align-items:center;gap:8px}
+.hg .kick::before{content:"";width:8px;height:8px;background:var(--yellow)}
+.hg h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800;letter-spacing:-.04em;line-height:1;margin:26px 0 10px}
+.hg .lead{font-size:clamp(1rem,2.4vw,1.2rem);color:rgba(255,255,255,.86);max-width:46rem;margin:0 0 22px}
+.hg .lead b,.hg .hl{color:var(--yellow);font-weight:700}
+.hg .grid{display:grid;gap:12px}
+.hg .kp{grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-bottom:12px}
+.hg .card{background:var(--raise);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;min-width:0}
+.hg .card h2{font-size:1.25rem;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:0}
+.hg #kpis h2,.hg #k-entregas h2,.hg #k-alcance h2{font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);font-weight:600;margin:0 0 10px}
+.hg .head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:18px}
+.hg .head .sub{color:var(--mute);font-size:.85rem;margin:6px 0 0}
+.hg .card.cc{padding:24px}
+.hg .legend{display:flex;gap:16px;color:var(--mute);font-size:.78rem;margin-top:12px;flex-wrap:wrap}
+.hg .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.hg .big{font-size:clamp(2.4rem,7vw,3.4rem);font-weight:800;letter-spacing:-.05em;line-height:.95;color:var(--yellow);margin:0}
+.hg .big.w{color:#fff}
+.hg .of{font-size:1rem;font-weight:500;letter-spacing:0;color:var(--mute);margin-left:6px}
+.hg .sub{font-size:.82rem;color:var(--mute);margin:8px 0 0}
+.hg .sub b{color:#fff;font-weight:600}
+.hg .bar{height:10px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden;margin:12px 0 0}
+.hg .bar>span{display:block;height:100%;border-radius:99px;background:var(--yellow);width:0}
+.hg .sec{margin-top:12px}
+.hg .two{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:12px}
+.hg .note{font-size:.8rem;color:var(--mute);margin:0 0 12px}
+.hg .chart{position:relative;min-height:320px;touch-action:pan-y}
+.hg .chart svg{display:block;width:100%;height:auto;overflow:visible}
+.hg .chart text{font-family:inherit;fill:rgba(255,255,255,.4);font-size:11px}
+.hg .tip{position:absolute;pointer-events:none;background:#0a0a0a;border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:130px;max-width:190px;font-size:.78rem;opacity:0;transform:translate(-50%,-110%);transition:opacity .12s;z-index:3;white-space:normal}
+.hg .tip.on{opacity:1}
+.hg .tip b{display:block;font-size:1.25rem;font-weight:800;letter-spacing:-.03em}
+.hg .tip b .u{font-size:.8rem;color:var(--mute);font-weight:500;letter-spacing:0}
+.hg .tip .d{color:var(--mute);margin-bottom:2px}
+.hg .tip .g{color:#6bd68a;font-weight:700}
+.hg .tip .nm{color:var(--mute);margin-top:6px;line-height:1.35}
+.hg .tag{display:inline-block;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:999px;border:1px solid var(--dim);color:var(--yellow);white-space:nowrap}
+.hg .tr{display:grid;grid-template-columns:64px 1fr auto;gap:4px 12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.hg .tr:first-child{border-top:0;padding-top:0}
+.hg .track{height:10px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden}
+.hg .track>span{display:block;height:100%;border-radius:99px;background:var(--yellow)}
+.hg .tn{font-weight:700;font-size:.9rem;text-align:right}
+.hg .tv{grid-column:2/4;font-size:.78rem;color:var(--mute)}
+.hg .tv b{color:#fff;font-weight:600}
+.hg .rk{display:grid;grid-template-columns:minmax(80px,170px) 1fr 64px;gap:10px;align-items:center;padding:5px 0;font-size:.84rem}
+.hg .rk .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hg .rk .nm i{font-style:normal;font-size:.64rem;color:var(--yellow);margin-left:6px;font-weight:700}
+.hg .rk .track{height:12px;border-radius:6px}
+.hg .rk .track>span{border-radius:6px}
+.hg .rk .nv{text-align:right;font-weight:700}
+.hg .ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+.hg .chip{font:inherit;font-size:.78rem;font-weight:600;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:#fff;cursor:pointer}
+.hg .chip:hover{border-color:var(--yellow)}
+.hg .chip.on{background:var(--yellow);border-color:var(--yellow);color:#000}
+.hg .chip:focus-visible,.hg a:focus-visible,.hg select:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.hg .dash-select{background-color:var(--raise);color:#fff;border:1px solid var(--line);border-radius:999px;font:inherit;font-size:.78rem;padding-top:6px;padding-bottom:6px;margin-left:auto}
+.hg .tw{overflow-x:auto}
+.hg table{width:100%;border-collapse:collapse;font-size:.84rem;min-width:900px}
+.hg th{text-align:left;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.hg td{padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.hg th.n,.hg td.n{text-align:right}
+
+.hg .lk{font:inherit;background:none;border:0;padding:0;color:#fff;font-weight:600;cursor:pointer;text-align:left;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.hg .lk:hover,.hg .lk:focus-visible{color:var(--yellow);text-decoration-color:var(--yellow)}
+.hg .rk .nm .lk{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
+.hg .ov{position:absolute;inset:0;background:rgba(0,0,0,.62);z-index:10}
+.hg .ov[hidden]{display:none}
+.hg .ov,.hg .ov *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.hg .ms .s2{grid-column:span 2}
+.hg .ms .plat{grid-column:1/-1}
+.hg .ms .plat b{font-size:1.05rem;letter-spacing:-.01em}
+.hg .rpch{margin:0 0 14px}
+.hg .rpch .note{margin:0 0 8px}
+.hg .rpch svg{display:block;width:100%;height:auto;overflow:visible}
+.hg .mbox{position:absolute;top:70px;left:0;right:0;margin:0 auto;width:min(960px,calc(100% - 24px));max-height:calc(100vh - 24px);overflow-y:auto;background:var(--raise);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.hg .mh{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.hg .mh h3{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;margin:10px 0 2px;line-height:1.05}
+.hg .mh p{margin:0;color:var(--mute);font-size:.82rem}
+.hg .x{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:transparent;color:#fff;font:inherit;font-size:1.2rem;line-height:1;cursor:pointer}
+.hg .x:hover{border-color:var(--yellow);color:var(--yellow)}
+.hg .ms{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:16px 0 4px}
+.hg .ms>div{grid-column:span 1}
+.hg .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 26px;align-items:start}
+.hg .cols .mt{margin-top:14px}
+.hg .mf{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.hg .mf details.gd{flex:1 1 360px;margin:0}
+.hg .mf .note{margin:0;flex:1 1 360px}
+.hg .mf a.btn{flex:none}
+@media (max-width:760px){.hg .ms{grid-template-columns:repeat(2,minmax(0,1fr))}.hg .cols{grid-template-columns:minmax(0,1fr)}}
+.hg .ms>div{background:var(--black);border:1px solid var(--line);border-radius:12px;padding:12px}
+.hg .ms .wide{grid-column:1/-1}
+.hg .ms .y{grid-column:span 2}
+.hg .ms small{display:block;color:var(--mute);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}
+.hg .ms b{display:block;font-size:1.5rem;font-weight:800;letter-spacing:-.03em}
+.hg .ms .y b{color:var(--yellow);font-size:2.2rem}
+.hg dl.md{display:grid;grid-template-columns:auto 1fr;gap:7px 14px;margin:0 0 18px;font-size:.84rem}
+.hg dl.md dt{color:var(--mute)}
+.hg dl.md dd{margin:0;text-align:right;font-weight:600}
+.hg .mt{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--yellow);margin:18px 0 8px;font-weight:700}
+.hg details.gd{margin:0 0 16px;font-size:.84rem}
+.hg details.gd summary{cursor:pointer;color:#fff;font-weight:700;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--black)}
+.hg details.gd[open] summary{border-color:var(--yellow);color:var(--yellow)}
+.hg .gz{max-height:200px;overflow:auto;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:8px;background:var(--black);line-height:1.5}
+.hg .gz h5{font-size:.95rem;margin:12px 0 6px;color:#fff}
+.hg .gz h5:first-child{margin-top:0}
+.hg .gz p{margin:0 0 8px;color:rgba(255,255,255,.86)}
+.hg .chip.red{border-color:#ff6b5a;color:#ff6b5a}
+.hg .chip.red.on{background:#ff6b5a;border-color:#ff6b5a;color:#000}
+.hg .tag.red{border-color:#ff6b5a;color:#ff6b5a}
+.hg tr.no td,.hg tr.no .lk{color:#ff6b5a}
+.hg tr.no .lk{text-decoration-color:rgba(255,107,90,.5)}
+.hg td.est{font-size:.76rem;color:var(--mute)}
+.hg tr.no td.est{color:#ff6b5a}
+.hg .tiers4{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:640px){.hg .tiers4{grid-template-columns:minmax(0,1fr)}}
+.hg a.btn{display:inline-block;background:var(--yellow);color:#000;border-radius:999px;padding:9px 18px;font-weight:700;font-size:.82rem;text-decoration:none}
+.hg table.mini{min-width:560px}
+.hg td.up{color:#6bd68a;font-weight:700}
+.hg td.dn{color:#ff6b5a;font-weight:700}
+.hg td.na{color:var(--mute);font-size:.76rem}
+.hg td.n.hi{color:var(--yellow);font-weight:700}
+.hg ul.ls{margin:0;padding:0;list-style:none;font-size:.86rem}
+.hg ul.ls li{padding:7px 0;border-top:1px solid var(--line)}
+.hg ul.ls li:first-child{border-top:0}
+.hg ul.ls span{color:var(--mute)}
+.hg details{margin-top:12px;font-size:.82rem;color:var(--mute)}
+.hg summary{cursor:pointer;color:#fff;font-weight:600}
+.hg footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);display:flex;align-items:center;gap:12px;font-size:.78rem;color:var(--mute)}
+.hg footer .logo{height:20px}
+@media (max-width:520px){.hg{padding:16px 12px 24px}.hg .rk{grid-template-columns:minmax(70px,120px) 1fr 56px}.hg .dash-select{margin-left:0}}
+
+.hg [hidden]{display:none !important}
+.hg .more,.hg .sg.more{margin-top:14px;border:1px solid var(--yellow);background:var(--yellow);color:#000;font-weight:700;padding:10px 24px;border-radius:999px;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.hg .more:hover,.hg .sg.more:hover{background:var(--yellow);color:#000;border-color:var(--yellow);transform:translateY(-1px);box-shadow:0 6px 20px rgba(245,212,0,.35)}
+.hg .more:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.hg tbody tr.moretr td{text-align:center;padding:6px 0 4px;border-bottom:0}
+.hg tbody tr.moretr .more{margin-top:10px}
+.hg .how{margin-top:12px}
+.hg .how p{font-size:.82rem;color:var(--mute);margin:8px 0 0}
+.hg .kp .big{font-size:clamp(1.9rem,3.6vw,3.4rem)}
+.hg .chart{min-height:0}
+.hg #por-tier,.hg #ranking{align-self:start}
+.hg .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;flex:none}
+.hg .sg{font:inherit;font-size:.78rem;font-weight:600;padding:6px 16px;border-radius:999px;border:0;background:transparent;color:#fff;cursor:pointer;transition:background .25s,color .25s}
+.hg .sg:hover{color:var(--yellow)}
+.hg .sg.on{background:var(--yellow);color:#000}
+.hg .sg:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.hg .tip.fix{transform:none;top:26px;min-width:0;max-width:none;white-space:nowrap;padding:9px 13px}
+.hg .tip.fix b{display:inline;font-size:1.15rem}
+.hg .tip.fix .d{margin:0}
+.hg dl.md dd{white-space:nowrap}
+.hg .legend i.ln{width:16px;height:3px;border-radius:2px;vertical-align:3px}
+.hg .legend i.ds{width:16px;height:0;border-radius:0;border-top:2px dashed #fff;vertical-align:3px;background:none}
+.hg .bar>span{transition:width 1s cubic-bezier(.2,.7,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:translateX(-50%) translateY(16px) scale(.97)}to{opacity:1;transform:translateX(-50%)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:no-preference){
+  .hg .hd,.hg h1,.hg .lead,.hg .card,.hg details{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+  .hg .kp .card:nth-child(2){animation-delay:.06s}.hg .kp .card:nth-child(3){animation-delay:.12s}.hg .kp .card:nth-child(4){animation-delay:.18s}
+  .hg .two .card:nth-child(2){animation-delay:.08s}
+  
+  
+}
+@media (max-width:520px){.hg .kp{grid-template-columns:repeat(2,minmax(0,1fr))}.hg .big{font-size:2.1rem}.hg .card.cc{padding:16px}.hg .card{padding:14px}.hg .head{flex-wrap:wrap}}
+
+/* gráficas: estilo mejorado */
+.hg .tip{background:rgba(18,18,18,.94);backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(0,0,0,.55)}
+.hg .tip .ev{color:#6bd68a;margin-top:2px}
+.hg .bar{height:14px;position:relative;overflow:visible;background:rgba(255,255,255,.1)}
+.hg .bar>span{position:relative;display:block;width:100%;height:100%;background:none;transition:none}
+.hg .bar .seg{position:absolute;top:0;bottom:0;left:0;display:block;border-radius:99px}
+.hg .bar .seg.done{background:#f5d400;box-shadow:0 0 18px rgba(245,212,0,.6)}
+.hg .bar .seg.pend{background:rgba(245,212,0,.3)}
+.hg .track{height:12px;position:relative}
+.hg .track>span{background:#f5d400;box-shadow:0 0 14px rgba(245,212,0,.45)}
+.hg .tw2{display:grid;grid-template-columns:208px minmax(0,1fr);gap:20px;align-items:center}
+.hg .rings svg{display:block;width:100%;max-width:208px;height:auto;margin:0 auto;overflow:visible}
+.hg .rings text{font-family:inherit}
+.hg .tl .tr:first-child{padding-top:10px;border-top:0}
+@media (max-width:640px){.hg .tw2{grid-template-columns:minmax(0,1fr)}}
+.hg .rk{grid-template-columns:20px minmax(80px,160px) 1fr 64px}
+.hg .rk .ix{font-size:.74rem;font-weight:700;color:rgba(255,255,255,.4);text-align:right}
+.hg .rk .ix.top{color:var(--yellow)}
+.hg .rk .track{overflow:visible;height:12px}
+.hg .rk .track>span{display:block;height:100%;border-radius:6px}
+.hg .rk .track>span.pod{background:#f5d400;box-shadow:0 0 16px rgba(245,212,0,.5)}
+.hg .rk .track>span.rest{background:rgba(255,255,255,.3);box-shadow:none}
+.hg .rk .track .avg{position:absolute;top:-9px;bottom:-9px;width:0;border-left:1px dashed rgba(255,255,255,.6);pointer-events:none}
+@media (max-width:520px){.hg .rk{grid-template-columns:18px minmax(60px,110px) 1fr 52px}}
+@keyframes pulse{0%{r:6;opacity:.7}100%{r:17;opacity:0}}
+@media (prefers-reduced-motion:no-preference){.hg .chart .pulse{animation:pulse 2.2s ease-out infinite}}
+@media (prefers-reduced-motion:reduce){.hg .chart .pulse{display:none}}
+</style>
+
+<div class="hg">
+  <header class="hd">
+    <a href="https://www.instagram.com/ingeniosomx/" target="_blank" rel="noopener" aria-label="Ingenioso en Instagram"><svg class="logo" viewBox="0 0 183.53 36.97" fill="#ffffff" role="img" aria-label="Ingenioso"><path d="M57.11,9.31l-2.35,16.74c-1.05,7.48-5.57,10.92-12.82,10.92-3.81,0-7.38-.93-9.48-2.76l2.91-4.18c1.52,1.38,4.2,2.28,6.78,2.28,4.11,0,6.17-1.87,6.67-5.49l.12-.86c-1.77,1.68-4.09,2.5-6.7,2.5-5.57,0-9.51-3.85-8.69-9.72.82-5.87,5.85-9.72,11.42-9.72,2.8,0,4.99.94,6.25,2.88l.36-2.58h5.53ZM50.03,18.73c.42-2.95-1.51-4.93-4.58-4.93s-5.58,1.98-6,4.93c-.42,2.95,1.55,4.93,4.61,4.93s5.55-1.98,5.96-4.93"/><path d="M79.09,21.11h-15.21c.21,2.5,2.12,4.03,5.19,4.03,2.13,0,3.75-.63,5.32-1.94l2.63,3.36c-2.17,2.13-5.13,3.25-8.75,3.25-6.95,0-10.86-4.37-10.02-10.35.85-6.02,6.05-10.36,12.18-10.36s9.9,3.97,8.99,10.43c-.06.44-.23,1.08-.33,1.57M64.29,17.71h9.9c-.05-2.54-1.73-4.19-4.34-4.19s-4.78,1.61-5.56,4.19"/><path d="M94.62,9.11c-2.72,0-5.21.93-7.03,2.65l.33-2.35h-5.57l-2.83,20.11h5.83l1.4-9.94c.52-3.7,2.78-5.42,5.58-5.42,2.58,0,3.86,1.49,3.4,4.75l-1.49,10.61h3.67s.08,0,.13,0c1.14-.05,2.08-.88,2.3-1.97.02-.09.03-.18.04-.27l1.3-9.27c.86-6.13-2.34-8.9-7.08-8.9"/><path d="M24.19,9.11c-2.73,0-5.21.93-7.03,2.65l.33-2.35h-5.57l-2.83,20.11h5.83l1.4-9.94c.52-3.7,2.78-5.42,5.58-5.42,2.58,0,3.86,1.49,3.4,4.75l-1.49,10.61h3.67s.09,0,.13,0c1.14-.05,2.08-.88,2.3-1.97.02-.09.03-.18.04-.27l1.3-9.27c.86-6.13-2.34-8.9-7.08-8.9"/><path d="M111.98,19.46c.85-6.06,6.13-10.36,12.51-10.36s10.42,4.3,9.57,10.36c-.85,6.06-6.09,10.35-12.48,10.35s-10.46-4.3-9.61-10.35M128.16,19.46c.49-3.48-1.42-5.57-4.34-5.57s-5.45,2.09-5.94,5.57c-.49,3.48,1.46,5.57,4.38,5.57s5.41-2.09,5.9-5.57"/><path d="M133.71,27.64l2.53-4.19c1.63,1.16,4.25,1.94,6.71,1.94,2.69,0,3.8-.71,3.96-1.83.46-3.29-12.16.08-11.03-7.96.54-3.81,4.35-6.51,10.22-6.51,2.76,0,5.74.64,7.49,1.76l-2.53,4.15c-1.82-1.12-3.75-1.49-5.58-1.49-2.61,0-3.85.83-4,1.87-.48,3.44,12.13.12,11.02,8.04-.52,3.74-4.38,6.39-10.39,6.39-3.4,0-6.7-.93-8.4-2.17"/><path d="M154.39,19.46c.85-6.06,6.13-10.36,12.51-10.36s10.42,4.3,9.57,10.36-6.09,10.35-12.48,10.35-10.46-4.3-9.6-10.35M170.57,19.46c.49-3.48-1.42-5.57-4.34-5.57s-5.45,2.09-5.94,5.57c-.49,3.48,1.46,5.57,4.38,5.57s5.41-2.09,5.9-5.57"/><path d="M2.53,29.42h0c-1.61,0-2.73-1.31-2.51-2.91l2.01-14.28c.23-1.61,1.71-2.92,3.32-2.92h2.91l-2.42,17.2c-.23,1.61-1.72,2.91-3.32,2.91"/><path d="M9.47,3.25c0,1.8-1.46,3.25-3.25,3.25s-3.25-1.46-3.25-3.25S4.42,0,6.22,0s3.25,1.46,3.25,3.25"/><path d="M105.89,29.42h0c-1.61,0-2.73-1.31-2.5-2.91l2.01-14.28c.23-1.61,1.72-2.91,3.32-2.91h2.92l-2.42,17.2c-.23,1.61-1.71,2.91-3.32,2.91"/><path d="M112.83,3.25c0,1.8-1.46,3.25-3.25,3.25s-3.25-1.46-3.25-3.25S107.78,0,109.58,0s3.25,1.46,3.25,3.25"/><path d="M178.94,7.33c-.17-.09-.43-.17-.78-.26s-.57-.16-.66-.24c-.07-.06-.11-.13-.11-.22,0-.09.04-.17.11-.22.12-.09.28-.13.49-.13s.36.04.46.12c.1.08.17.21.2.4l.72-.03c-.01-.33-.13-.59-.36-.79-.23-.2-.56-.3-1.01-.3-.27,0-.51.04-.71.12-.19.08-.34.2-.44.36-.1.16-.15.33-.15.51,0,.28.11.52.33.72.16.14.43.26.81.35.3.08.5.13.58.16.12.04.21.1.26.16.05.06.07.13.07.22,0,.13-.06.25-.18.34-.12.1-.29.15-.53.15-.22,0-.39-.06-.52-.17-.13-.11-.22-.28-.26-.52l-.7.07c.05.4.19.7.43.91.24.21.59.31,1.04.31.31,0,.57-.04.78-.13.21-.09.37-.22.48-.4.11-.18.17-.37.17-.58,0-.23-.05-.41-.14-.57-.1-.15-.23-.28-.4-.36"/><polygon points="182.44 5.73 181.8 8.17 181.15 5.73 180.07 5.73 180.07 9.31 180.74 9.31 180.74 6.49 181.45 9.31 182.15 9.31 182.86 6.49 182.86 9.31 183.53 9.31 183.53 5.73 182.44 5.73"/></svg></a>
+    <span class="kick">Hangar Gym · Carrera 22 nov 2026</span>
+  </header>
+
+  <h1 id="titulo">Panel de RPs</h1>
+  <p class="lead" id="resumen">Entregas, compromisos y alcance de los RPs de la Carrera Hangar, con la lectura de Instagram del 18 y 19 de noviembre.</p>
+
+  <section class="grid kp" id="kpis" aria-label="Totales de la campaña">
+    <div class="card" id="k-vistas">
+      <h2>Visualizaciones</h2>
+      <p class="big"><span data-draw="kpi" data-source="kpi" data-field="vistas" data-row="0">—</span></p>
+      <p class="sub">Promedio <b data-draw="kpi" data-source="kpi" data-field="promedio_vistas" data-row="0">—</b> por reel · <b data-draw="kpi" data-source="kpi" data-field="leidos" data-row="0">—</b> reels leídos</p>
+    </div>
+    <div class="card" id="k-likes">
+      <h2>Me gusta</h2>
+      <p class="big w"><span data-draw="kpi" data-source="kpi" data-field="likes" data-row="0">—</span></p>
+      <p class="sub"><b data-draw="kpi" data-source="kpi" data-field="likes_100" data-row="0">—</b> por cada 100 views</p>
+    </div>
+    <div class="card" id="k-comentarios">
+      <h2>Comentarios</h2>
+      <p class="big w"><span data-draw="kpi" data-source="kpi" data-field="comentarios" data-row="0">—</span></p>
+      <p class="sub"><b data-draw="kpi" data-source="kpi" data-field="coment_1000" data-row="0">—</b> por cada 1,000 views</p>
+    </div>
+    <div class="card" id="k-compartidos">
+      <h2>Compartidos</h2>
+      <p class="big w"><span data-draw="kpi" data-source="kpi" data-field="compartidos" data-row="0">—</span></p>
+      <p class="sub"><b data-draw="kpi" data-source="kpi" data-field="comp_1000" data-row="0">—</b> por cada 1,000 views</p>
+    </div>
+  </section>
+
+  <section class="grid two" style="margin-top:0">
+    <div class="card" id="k-entregas">
+      <h2>Entregas de videos</h2>
+      <p class="big"><span data-draw="kpi" data-source="kpi" data-field="entregadas" data-row="0">—</span><span class="of">de <span data-draw="kpi" data-source="kpi" data-field="plan" data-row="0">—</span></span></p>
+      <div class="bar" role="img" aria-label="Avance de entregas contra el plan"><span data-draw="barra"></span></div>
+      <p class="sub"><b data-draw="kpi" data-source="kpi" data-field="pct" data-row="0">—</b>% del plan · <b data-draw="kpi" data-source="kpi" data-field="pendientes" data-row="0">—</b> comprometidos sin entregar</p>
+    </div>
+    <div class="card" id="k-alcance">
+      <h2>Alcance potencial</h2>
+      <p class="big w"><span data-draw="kpi" data-source="kpi" data-field="seg_ig" data-row="0">—</span><span class="of">seguidores IG</span></p>
+      <p class="sub">Seguidores reales de <b data-draw="kpi" data-source="kpi" data-field="perfiles" data-row="0">—</b> perfiles leídos en Instagram. TikTok: <b data-draw="kpi" data-source="kpi" data-field="seg_tt" data-row="0">—</b>+ (rangos que reportaron).</p>
+    </div>
+  </section>
+
+  <section class="card sec cc" id="entregas-dia">
+    <div class="head">
+      <div>
+        <h2>Evolución de la campaña</h2>
+        <p class="sub" data-only="entregas">Videos: cuántos RPs se comprometieron a grabar y cuántos ya lo entregaron, día por día.</p>
+        <p class="sub" data-only="alcance" hidden>Views: lo que suman los videos entregados contra lo que sus RPs dijeron que suelen alcanzar. Es un piso, y solo cuenta a quienes dieron ese dato.</p>
+      </div>
+      <div class="seg" role="group" aria-label="Qué mostrar en las gráficas">
+        <button class="sg on" type="button" data-vista="entregas">Videos</button>
+        <button class="sg" type="button" data-vista="alcance">Views</button>
+      </div>
+    </div>
+    <div class="chart" data-draw="chart_dias" data-tier="all" data-source="por_dia">—</div>
+    <div class="legend" data-only="entregas"><span><i class="ln" style="background:#f5d400"></i>Entregados</span><span><i class="ln" style="background:#fff"></i>Comprometidos</span><span><i style="background:rgba(255,255,255,.14)"></i>Pendientes (la diferencia)</span><span><i style="border:1px dashed rgba(255,255,255,.5)"></i>Meta del plan</span></div>
+    <div class="legend" data-only="alcance" hidden><span><i class="ln" style="background:#f5d400"></i>Views reales</span><span><i class="ln" style="background:repeating-linear-gradient(90deg,#6bd68a 0 3px,transparent 3px 7px)"></i>Views esperadas</span><span><i style="background:rgba(245,212,0,.2)"></i>Views de más sobre lo esperado</span></div>
+  </section>
+
+  <section class="grid two tiers4" id="graficas-tier">
+    <div class="card cc"><div class="head"><div><h2>Tier A</h2><p class="sub" data-draw="tsub" data-tier="A" data-source="por_dia">—</p></div></div><div class="chart" data-draw="chart_dias" data-tier="A" data-source="por_dia">—</div></div>
+    <div class="card cc"><div class="head"><div><h2>Tier B</h2><p class="sub" data-draw="tsub" data-tier="B" data-source="por_dia">—</p></div></div><div class="chart" data-draw="chart_dias" data-tier="B" data-source="por_dia">—</div></div>
+    <div class="card cc"><div class="head"><div><h2>Tier C</h2><p class="sub" data-draw="tsub" data-tier="C" data-source="por_dia">—</p></div></div><div class="chart" data-draw="chart_dias" data-tier="C" data-source="por_dia">—</div></div>
+    <div class="card cc"><div class="head"><div><h2>Tier D</h2><p class="sub" data-draw="tsub" data-tier="D" data-source="por_dia">—</p></div></div><div class="chart" data-draw="chart_dias" data-tier="D" data-source="por_dia">—</div></div>
+  </section>
+
+  <section class="grid two">
+    <div class="card" id="por-tier">
+      <h2>Por tier</h2>
+      <p class="note">Qué tanto del plan lleva cada tier. El centro suma los cuatro.</p>
+      <div class="tw2">
+        <div class="rings" data-draw="rings" data-source="por_tier">—</div>
+        <div class="tl" data-draw="tiers" data-source="por_tier">—</div>
+      </div>
+    </div>
+    <div class="card" id="ranking">
+      <h2>Visualizaciones por persona</h2>
+      <p class="note">Los 12 reels con más views. Toca un nombre para ver su tarjeta.</p>
+      <div data-draw="ranking" data-source="ranking">—</div>
+    </div>
+  </section>
+
+  <section class="card sec" id="esperado">
+    <h2>Alcance esperado, según sus perfiles</h2>
+    <p class="note" style="margin-top:6px">Lo que cada RP dijo que alcanzan sus reels (un mínimo) contra lo que logró su video. Solo cuenta a quienes dieron ese dato.</p>
+    <div class="tw">
+      <table class="mini" data-source="esperado" data-row-key="grupo">
+        <thead><tr><th data-field="grupo">Grupo</th><th class="n" data-field="con_dato">RPs con dato</th><th class="n" data-field="esperado">Esperado</th><th class="n" data-field="real">Real</th><th class="n" data-field="veces">Real / esperado</th><th class="n" data-field="superaron">Superaron</th><th class="n" data-field="pct_seg">Views / seguidores</th></tr></thead>
+        <tbody data-draw="esp_tabla"></tbody>
+      </table>
+    </div>
+    <div class="grid two">
+      <div class="card">
+        <h2>Quienes más superaron lo esperado</h2>
+        <ul class="ls" data-draw="esp_lista" data-kind="up" data-source="por_rp"></ul>
+      </div>
+      <div class="card">
+        <h2>Quienes quedaron abajo</h2>
+        <ul class="ls" data-draw="esp_lista" data-kind="down" data-source="por_rp"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card sec" id="detalle">
+    <h2>Detalle por persona</h2>
+    <p class="note" style="margin-top:6px">Toca un nombre para abrir su tarjeta con todos sus datos.</p>
+    <div class="ctl">
+      <button class="chip on" type="button" data-tier="all">Todos</button>
+      <button class="chip" type="button" data-tier="A">Tier A</button>
+      <button class="chip" type="button" data-tier="B">Tier B</button>
+      <button class="chip" type="button" data-tier="C">Tier C</button>
+      <button class="chip" type="button" data-tier="D">Tier D</button>
+      <button class="chip red" type="button" data-tier="no">No entregaron (<span data-draw="n_no" data-source="rps">—</span>)</button>
+      <select class="dash-select" id="orden" aria-label="Ordenar por">
+        <option value="vistas">Ordenar: visualizaciones</option>
+        <option value="likes">Ordenar: me gusta</option>
+        <option value="comentarios">Ordenar: comentarios</option>
+        <option value="publicado">Ordenar: fecha de publicación</option>
+      </select>
+    </div>
+    <div class="tw">
+      <table data-source="rps" data-row-key="rp">
+        <thead><tr>
+          <th data-field="rp">RP</th><th data-field="tier">Tier</th><th data-field="sucursal">Sucursal</th><th data-field="publicado">Publicó</th><th class="n" data-field="seguidores">Seguidores IG</th>
+          <th class="n" data-field="vistas">Visualizaciones</th><th class="n" data-field="likes">Me gusta</th><th class="n" data-field="comentarios">Comentarios</th><th class="n" data-field="compartidos">Compartidos</th><th data-field="estado">Estado</th>
+        </tr></thead>
+        <tbody data-draw="tabla"></tbody>
+      </table>
+    </div>
+    
+  </section>
+
+  <section class="grid two" id="notas">
+    <div class="card">
+      <h2>Entregados, sin lectura de views</h2>
+      <p class="note">Tienen video publicado, pero Instagram no dejó leer sus números.</p>
+      <ul class="ls" data-draw="faltan" data-source="rps"></ul>
+    </div>
+    <div class="card">
+      <h2>Likes que conviene revisar</h2>
+      <p class="note">Reels con muchas views y muy pocos likes. Puede ser que oculten los likes o que sea una publicación colaborativa.</p>
+      <ul class="ls" data-draw="anomalias" data-source="rps"></ul>
+    </div>
+  </section>
+
+  <section class="card how" id="como-se-leen">
+    <h2>Cómo se leen estos números</h2>
+    <p>Las visualizaciones, likes, comentarios y compartidos salen de leer cada reel en Instagram: el 18 nov 2026, 5:40 p. m. (hora de CDMX) para la mayoría, y el 19 nov, de madrugada, para Sandy, Diego y Javier. Para 15 RPs de tier A se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov (entre 11:45 a. m. y 4:17 p. m.): son los números de su propia cuenta, por eso ya no hay likes ocultos en esos reels. Es una sola foto: todavía no hay comparación de crecimiento entre lecturas. Los seguidores salen del perfil público de cada RP el mismo día de su lectura (Instagram redondea las cifras grandes). Las entregas, los formularios y las fechas comprometidas salen de la base de RPs en Notion y del portal. El plan es de 54 RPs: tier A 20, B 15, C 12 y D 7.</p>
+    <p>Compromiso: un RP cuenta como comprometido desde el día que respondió el formulario con compromiso. Si no hay fecha del formulario se usa el día que publicó, o su fecha comprometida. Los pendientes son los comprometidos que todavía no entregan. Los que aparecen en rojo no han entregado: a unos ya se les venció la fecha y otros no se comprometieron.</p>
+  </section>
+
+  <div class="ov" id="rpov" hidden>
+    <div class="mbox" id="rpbox" role="dialog" aria-modal="true" aria-label="Tarjeta del RP" data-draw="rp_card" data-source="por_rp"></div>
+  </div>
+
+  <footer>
+    <span>Hecho por</span>
+    <a href="https://www.instagram.com/ingeniosomx/" target="_blank" rel="noopener" aria-label="Ingenioso en Instagram"><svg class="logo" viewBox="0 0 183.53 36.97" fill="#ffffff" role="img" aria-label="Ingenioso"><path d="M57.11,9.31l-2.35,16.74c-1.05,7.48-5.57,10.92-12.82,10.92-3.81,0-7.38-.93-9.48-2.76l2.91-4.18c1.52,1.38,4.2,2.28,6.78,2.28,4.11,0,6.17-1.87,6.67-5.49l.12-.86c-1.77,1.68-4.09,2.5-6.7,2.5-5.57,0-9.51-3.85-8.69-9.72.82-5.87,5.85-9.72,11.42-9.72,2.8,0,4.99.94,6.25,2.88l.36-2.58h5.53ZM50.03,18.73c.42-2.95-1.51-4.93-4.58-4.93s-5.58,1.98-6,4.93c-.42,2.95,1.55,4.93,4.61,4.93s5.55-1.98,5.96-4.93"/><path d="M79.09,21.11h-15.21c.21,2.5,2.12,4.03,5.19,4.03,2.13,0,3.75-.63,5.32-1.94l2.63,3.36c-2.17,2.13-5.13,3.25-8.75,3.25-6.95,0-10.86-4.37-10.02-10.35.85-6.02,6.05-10.36,12.18-10.36s9.9,3.97,8.99,10.43c-.06.44-.23,1.08-.33,1.57M64.29,17.71h9.9c-.05-2.54-1.73-4.19-4.34-4.19s-4.78,1.61-5.56,4.19"/><path d="M94.62,9.11c-2.72,0-5.21.93-7.03,2.65l.33-2.35h-5.57l-2.83,20.11h5.83l1.4-9.94c.52-3.7,2.78-5.42,5.58-5.42,2.58,0,3.86,1.49,3.4,4.75l-1.49,10.61h3.67s.08,0,.13,0c1.14-.05,2.08-.88,2.3-1.97.02-.09.03-.18.04-.27l1.3-9.27c.86-6.13-2.34-8.9-7.08-8.9"/><path d="M24.19,9.11c-2.73,0-5.21.93-7.03,2.65l.33-2.35h-5.57l-2.83,20.11h5.83l1.4-9.94c.52-3.7,2.78-5.42,5.58-5.42,2.58,0,3.86,1.49,3.4,4.75l-1.49,10.61h3.67s.09,0,.13,0c1.14-.05,2.08-.88,2.3-1.97.02-.09.03-.18.04-.27l1.3-9.27c.86-6.13-2.34-8.9-7.08-8.9"/><path d="M111.98,19.46c.85-6.06,6.13-10.36,12.51-10.36s10.42,4.3,9.57,10.36c-.85,6.06-6.09,10.35-12.48,10.35s-10.46-4.3-9.61-10.35M128.16,19.46c.49-3.48-1.42-5.57-4.34-5.57s-5.45,2.09-5.94,5.57c-.49,3.48,1.46,5.57,4.38,5.57s5.41-2.09,5.9-5.57"/><path d="M133.71,27.64l2.53-4.19c1.63,1.16,4.25,1.94,6.71,1.94,2.69,0,3.8-.71,3.96-1.83.46-3.29-12.16.08-11.03-7.96.54-3.81,4.35-6.51,10.22-6.51,2.76,0,5.74.64,7.49,1.76l-2.53,4.15c-1.82-1.12-3.75-1.49-5.58-1.49-2.61,0-3.85.83-4,1.87-.48,3.44,12.13.12,11.02,8.04-.52,3.74-4.38,6.39-10.39,6.39-3.4,0-6.7-.93-8.4-2.17"/><path d="M154.39,19.46c.85-6.06,6.13-10.36,12.51-10.36s10.42,4.3,9.57,10.36-6.09,10.35-12.48,10.35-10.46-4.3-9.6-10.35M170.57,19.46c.49-3.48-1.42-5.57-4.34-5.57s-5.45,2.09-5.94,5.57c-.49,3.48,1.46,5.57,4.38,5.57s5.41-2.09,5.9-5.57"/><path d="M2.53,29.42h0c-1.61,0-2.73-1.31-2.51-2.91l2.01-14.28c.23-1.61,1.71-2.92,3.32-2.92h2.91l-2.42,17.2c-.23,1.61-1.72,2.91-3.32,2.91"/><path d="M9.47,3.25c0,1.8-1.46,3.25-3.25,3.25s-3.25-1.46-3.25-3.25S4.42,0,6.22,0s3.25,1.46,3.25,3.25"/><path d="M105.89,29.42h0c-1.61,0-2.73-1.31-2.5-2.91l2.01-14.28c.23-1.61,1.72-2.91,3.32-2.91h2.92l-2.42,17.2c-.23,1.61-1.71,2.91-3.32,2.91"/><path d="M112.83,3.25c0,1.8-1.46,3.25-3.25,3.25s-3.25-1.46-3.25-3.25S107.78,0,109.58,0s3.25,1.46,3.25,3.25"/><path d="M178.94,7.33c-.17-.09-.43-.17-.78-.26s-.57-.16-.66-.24c-.07-.06-.11-.13-.11-.22,0-.09.04-.17.11-.22.12-.09.28-.13.49-.13s.36.04.46.12c.1.08.17.21.2.4l.72-.03c-.01-.33-.13-.59-.36-.79-.23-.2-.56-.3-1.01-.3-.27,0-.51.04-.71.12-.19.08-.34.2-.44.36-.1.16-.15.33-.15.51,0,.28.11.52.33.72.16.14.43.26.81.35.3.08.5.13.58.16.12.04.21.1.26.16.05.06.07.13.07.22,0,.13-.06.25-.18.34-.12.1-.29.15-.53.15-.22,0-.39-.06-.52-.17-.13-.11-.22-.28-.26-.52l-.7.07c.05.4.19.7.43.91.24.21.59.31,1.04.31.31,0,.57-.04.78-.13.21-.09.37-.22.48-.4.11-.18.17-.37.17-.58,0-.23-.05-.41-.14-.57-.1-.15-.23-.28-.4-.36"/><polygon points="182.44 5.73 181.8 8.17 181.15 5.73 180.07 5.73 180.07 9.31 180.74 9.31 180.74 6.49 181.45 9.31 182.15 9.31 182.86 6.49 182.86 9.31 183.53 9.31 183.53 5.73 182.44 5.73"/></svg></a>
+  </footer>
+</div>
+
+<script>
+window.NF = new Intl.NumberFormat('es-MX');
+window.fmt = (v) => window.NF.format(v);
+window.MES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+window.parseDay = d3.utcParse('%Y-%m-%d');
+window.isoDay = d3.utcFormat('%Y-%m-%d');
+window.dlabel = (s) => { const d = window.parseDay(s); return d ? d.getUTCDate() + ' ' + window.MES[d.getUTCMonth()] : ''; };
+
+dash.calc('kpi', {
+  inputs: ['rps', 'plan'],
+  title: 'Totales de la campaña',
+  description: 'Entregas contra el plan y totales de las lecturas de Instagram.',
+  fn: (rps, plan) => {
+    const ent = rps.filter((r) => r.entregado);
+    const leidos = ent.filter((r) => r.leido);
+    const sum = (k) => d3.sum(leidos, (r) => +r[k] || 0);
+    const planTot = d3.sum(plan, (p) => +p.plan);
+    const comp = rps.filter((r) => r.entregado || r.se_comprometio).length;
+    return [{
+      entregadas: ent.length, plan: planTot, pct: planTot ? Math.round(100 * ent.length / planTot) : 0,
+      faltan: planTot - ent.length, comprometidos: comp, pendientes: comp - ent.length,
+      leidos: leidos.length, sin_lectura: ent.length - leidos.length,
+      vistas: sum('vistas'), likes: sum('likes'), comentarios: sum('comentarios'), compartidos: sum('compartidos'),
+      promedio_vistas: leidos.length ? Math.round(sum('vistas') / leidos.length) : 0,
+      likes_100: sum('vistas') ? Math.round(1000 * sum('likes') / sum('vistas')) / 10 : 0,
+      coment_1000: sum('vistas') ? Math.round(10000 * sum('comentarios') / sum('vistas')) / 10 : 0,
+      comp_1000: sum('vistas') ? Math.round(10000 * sum('compartidos') / sum('vistas')) / 10 : 0,
+      seg_ig: d3.sum(rps, (r) => +r.seguidores || 0), perfiles: rps.filter((r) => r.seguidores != null).length,
+      seg_tt: d3.sum(rps, (r) => +r.seg_tt || 0)
+    }];
+  }
+});
+
+dash.calc('por_dia', {
+  inputs: ['rps', 'plan'],
+  title: 'Entregas y compromisos por día',
+  description: 'Por día y por tier: entregas, compromisos nuevos, acumulados y pendientes por entregar.',
+  fn: (rps, plan) => {
+    const dias = [];
+    for (let t = Date.UTC(2026, 9, 13); t <= Date.UTC(2026, 10, 18); t += 864e5) dias.push(new Date(t).toISOString().slice(0, 10));
+    const fechaCompromiso = (r) => (r.respondio && r.publicado ? (r.respondio < r.publicado ? r.respondio : r.publicado) : (r.respondio || r.publicado || r.comprometido));
+    const out = [];
+    ['all', 'A', 'B', 'C', 'D'].forEach((g) => {
+      const rs = rps.filter((r) => g === 'all' || r.tier === g);
+      const planG = g === 'all' ? d3.sum(plan, (p) => +p.plan) : +((plan.find((p) => p.tier === g) || {}).plan) || 0;
+      let ae = 0, ac = 0, ee = 0, er = 0;
+      dias.forEach((f) => {
+        const ent = rs.filter((r) => r.entregado && r.publicado === f);
+        const com = rs.filter((r) => (r.entregado || r.se_comprometio) && fechaCompromiso(r) === f);
+        ae += ent.length; ac += com.length;
+        ent.forEach((r) => { if (r.leido && r.reel_habitual > 0) { ee += r.reel_habitual; er += r.vistas; } });
+        out.push({
+          grupo: g, fecha: f, plan: planG, entregas: ent.length, compromisos: com.length,
+          acum_entregas: ae, acum_compromisos: ac, pendientes: ac - ae, acum_esperado: ee, acum_real: er,
+          nombres_entregas: ent.map((r) => r.rp).join(', '), nombres_compromisos: com.map((r) => r.rp).join(', ')
+        });
+      });
+    });
+    return out;
+  }
+});
+
+dash.calc('por_tier', {
+  inputs: ['rps', 'plan'],
+  title: 'Avance por tier',
+  description: 'Entregas contra plan, y totales de views, likes y comentarios por tier.',
+  fn: (rps, plan) => plan.map((p) => {
+    const g = rps.filter((r) => r.tier === p.tier && r.entregado);
+    const l = g.filter((r) => r.leido);
+    return {
+      tier: p.tier, entregadas: g.length, plan: +p.plan, pct: Math.round(100 * g.length / (+p.plan || 1)),
+      leidos: l.length, vistas: d3.sum(l, (r) => r.vistas), likes: d3.sum(l, (r) => r.likes), comentarios: d3.sum(l, (r) => r.comentarios)
+    };
+  })
+});
+
+dash.calc('por_rp', {
+  inputs: ['rps'],
+  title: 'Ficha por RP',
+  description: 'Datos de cada RP con su lugar en el ranking y en su tier, comparaciones con el promedio, ritmo de views e interacción.',
+  fn: (rps) => {
+    const l = rps.filter((r) => r.leido).sort((a, b) => b.vistas - a.vistas);
+    const pos = new Map(l.map((r, i) => [r.rp, i + 1]));
+    const prom = l.length ? d3.sum(l, (r) => r.vistas) / l.length : 0;
+    const porTier = d3.group(l, (r) => r.tier);
+    const corte = Date.UTC(2026, 10, 18);
+    const pct = (a, b) => (b ? Math.round(100 * (a / b - 1)) : null);
+    return rps.map((r) => {
+      const g = porTier.get(r.tier) || [];
+      const promT = g.length ? d3.sum(g, (x) => x.vistas) / g.length : 0;
+      const dias = r.publicado ? Math.max(1, Math.round((corte - Date.parse(r.publicado + 'T00:00:00Z')) / 864e5)) : null;
+      const v = r.leido ? r.vistas : null;
+      return Object.assign({}, r, {
+        posicion: pos.has(r.rp) ? pos.get(r.rp) : null,
+        leidos_total: l.length,
+        posicion_tier: g.findIndex((x) => x.rp === r.rp) + 1 || null,
+        tier_total: g.length,
+        vs_promedio: v != null ? pct(v, prom) : null,
+        vs_tier: v != null ? pct(v, promT) : null,
+        interaccion: v ? Math.round(1000 * ((r.likes || 0) + (r.comentarios || 0) + (r.compartidos || 0)) / v) / 10 : null,
+        dias_publicado: dias,
+        vistas_dia: v != null && dias ? Math.round(v / dias) : null,
+        likes_100: v ? Math.round(1000 * (r.likes || 0) / v) / 10 : null,
+        coment_1000: v ? Math.round(10000 * (r.comentarios || 0) / v) / 10 : null,
+        vs_habitual: v != null && r.reel_habitual ? pct(v, r.reel_habitual) : null,
+        alcance_seg: v != null && r.seguidores ? Math.round(1000 * v / r.seguidores) / 10 : null
+      });
+    });
+  }
+});
+
+dash.calc('esperado', {
+  inputs: ['rps'],
+  title: 'Alcance esperado contra real',
+  description: 'Views habituales que cada RP dijo tener (mínimo del formulario) contra las views reales de su reel, y views sobre seguidores.',
+  fn: (rps) => ['all', 'A', 'B', 'C', 'D'].map((g) => {
+    const rs = rps.filter((r) => r.leido && (g === 'all' || r.tier === g));
+    const cd = rs.filter((r) => r.reel_habitual > 0);
+    const esp = d3.sum(cd, (r) => r.reel_habitual), real = d3.sum(cd, (r) => r.vistas);
+    const cs = rs.filter((r) => r.seguidores > 0);
+    const seg = d3.sum(cs, (r) => r.seguidores), vs = d3.sum(cs, (r) => r.vistas);
+    return {
+      grupo: g, leidos: rs.length, con_dato: cd.length, esperado: esp, real: real,
+      dif: esp ? Math.round(100 * (real / esp - 1)) : null,
+      veces: esp ? Math.round(100 * real / esp) / 100 : null,
+      superaron: cd.filter((r) => r.vistas >= r.reel_habitual).length, abajo: cd.filter((r) => r.vistas < r.reel_habitual).length,
+      seguidores: seg, vistas_seg: vs, con_seg: cs.length, pct_seg: seg ? Math.round(1000 * vs / seg) / 10 : null
+    };
+  })
+});
+
+dash.calc('ranking', {
+  inputs: ['rps'],
+  title: 'Ranking de visualizaciones',
+  description: 'Reels leídos, de más a menos visualizaciones.',
+  fn: (rps) => rps.filter((r) => r.leido).map((r) => ({ rp: r.rp, tier: r.tier, vistas: r.vistas, likes: r.likes, comentarios: r.comentarios }))
+    .sort((a, b) => b.vistas - a.vistas)
+});
+</script>
+
+<script>
+const TABLE_LIMIT = 15;
+const state = { tier: 'all', sort: 'vistas', rp: null, vista: 'entregas', expand: false };
+const REDUCE = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+const kfmt = (v) => (v >= 10000 ? Math.round(v / 1000) + 'k' : v >= 1000 ? Math.round(v / 100) / 10 + 'k' : String(Math.round(v)));
+function animNum(el, v, f) {
+  const txt = f(v);
+  if (REDUCE || el.__shown || typeof v !== 'number') { el.textContent = txt; el.__shown = true; return; }
+  el.__shown = true;
+  d3.select(el).transition().duration(1000).ease(d3.easeCubicOut)
+    .tween('n', () => { const i = d3.interpolateNumber(0, v); return (t) => { el.textContent = f(i(t)); }; })
+    .on('end', () => { el.textContent = txt; });
+}
+const grow = (sp, w, i, quiet) => {
+  if (REDUCE || quiet) { sp.style('width', w); return; }
+  sp.style('width', '0%').transition().delay(150 + (i || 0) * 45).duration(900).ease(d3.easeCubicOut).style('width', w);
+};
+let chartUid = 0;
+const segTxt = (v) => (v == null ? 'sin dato' : v === 0 ? 'menos de 1,000' : fmt(v) + '+');
+function closeRP() {
+  state.rp = null;
+  const ov = document.getElementById('rpov');
+  if (ov) ov.hidden = true;
+}
+function openRP(name, ev) {
+  state.rp = name;
+  const ov = document.getElementById('rpov');
+  if (!ov) return;
+  const hg = ov.parentElement, box = document.getElementById('rpbox');
+  box.style.visibility = 'hidden';
+  ov.hidden = false;
+  dash.draw('rp_card');
+  requestAnimationFrame(() => {
+    const hr = hg.getBoundingClientRect(), vh = window.innerHeight || 800;
+    const scrolls = hg.offsetHeight > vh + 40;
+    box.scrollTop = 0;
+    const cy = scrolls || !ev ? vh / 2 - hr.top : ev.clientY - hr.top;
+    box.style.top = Math.max(12, Math.min(cy - box.offsetHeight / 2, hg.offsetHeight - box.offsetHeight - 12)) + 'px';
+    box.style.visibility = '';
+    const x = box.querySelector('.x');
+    if (x) x.focus({ preventScroll: true });
+  });
+}
+const nameBtn = (sel, name) => sel.append('button').attr('class', 'lk').attr('type', 'button').text(name).on('click', (ev) => openRP(name, ev));
+const SNAP_DAY = '2026-11-18';
+const okAll = (...ids) => ids.every((id) => dash.data(id).status === 'ok');
+const failMsg = (el, ...ids) => { el.textContent = ids.some((id) => dash.data(id).status === 'error') ? 'No cargó' : '—'; };
+
+dash.draw('kpi', (el) => {
+  const k = dash.data('kpi');
+  if (k.status !== 'ok' || !k.data.length) { el.textContent = '—'; return; }
+  const fld = el.dataset.field, v = k.data[0][fld];
+  if (v == null) { el.textContent = '—'; return; }
+  const dec = fld === 'likes_100' || fld === 'coment_1000' || fld === 'comp_1000';
+  animNum(el, v, dec ? (x) => String(Math.round(x * 10) / 10) : (x) => fmt(Math.round(x)));
+});
+
+dash.draw('barra', (el) => {
+  const k = dash.data('kpi');
+  el.replaceChildren();
+  if (k.status !== 'ok' || !k.data.length) return;
+  const r = k.data[0], plan = r.plan || 1;
+  const done = Math.min(100, 100 * r.entregadas / plan), pend = Math.min(100 - done, 100 * Math.max(0, r.pendientes) / plan);
+  const quiet = REDUCE || !!el.__drawn; el.__drawn = true;
+  const s = d3.select(el);
+  const a = s.append('i').attr('class', 'seg pend');
+  const b = s.append('i').attr('class', 'seg done');
+  if (quiet) { a.style('width', (done + pend) + '%'); b.style('width', done + '%'); return; }
+  a.style('width', '0%').transition().delay(500).duration(1000).ease(d3.easeCubicOut).style('width', (done + pend) + '%');
+  b.style('width', '0%').transition().duration(1000).ease(d3.easeCubicOut).style('width', done + '%');
+});
+
+dash.draw('tsub', (el) => {
+  const d = dash.data('por_dia');
+  if (d.status !== 'ok') { el.textContent = '—'; return; }
+  const rows = d.data.filter((x) => x.grupo === (el.dataset.tier || 'all'));
+  if (!rows.length) { el.textContent = '—'; return; }
+  const l = rows[rows.length - 1];
+  el.textContent = state.vista === 'alcance'
+    ? (l.acum_esperado ? `${fmt(l.acum_real)} views · ${fmt(l.acum_esperado)}+ esperadas` : 'Sin dato de alcance esperado')
+    : `${l.acum_entregas} de ${l.plan} entregados · ${l.pendientes} pendiente${l.pendientes === 1 ? '' : 's'}`;
+});
+
+const TIER_COLOR = { A: '#f5d400', B: '#ffffff', C: '#ff8a3d', D: '#8fb8ff' };
+const tcol = (t) => TIER_COLOR[t] || '#f5d400';
+
+dash.draw('chart_dias', (el) => {
+  const d = dash.data('por_dia');
+  if (!okAll('por_dia') || !d.data.length) { failMsg(el, 'por_dia'); return; }
+  const grupo = el.dataset.tier || 'all', big = grupo === 'all', alc = state.vista === 'alcance';
+  const series = d.data.filter((x) => x.grupo === grupo);
+  if (!series.length) { el.textContent = '—'; return; }
+  const N = series.length, last = series[N - 1], plan = series[0].plan || 1;
+  const kA = alc ? 'acum_esperado' : 'acum_compromisos', kB = alc ? 'acum_real' : 'acum_entregas';
+  const GREEN = '#6bd68a';
+  const yMax = alc ? d3.scaleLinear().domain([0, Math.max(1, d3.max(series, (s) => Math.max(s.acum_esperado, s.acum_real)))]).nice(4).domain()[1] : plan;
+  const W = Math.max(280, el.clientWidth || 800);
+  const H = big ? Math.round(Math.min(400, Math.max(300, W * 0.38))) : Math.round(Math.min(320, Math.max(250, W * 0.55)));
+  const pl = alc ? 46 : 34, pr = big ? 98 : 46, pt = 22, pb = 28, pw = W - pl - pr, ph = H - pt - pb;
+  const X = (i) => pl + (N > 1 ? i * pw / (N - 1) : pw / 2), Y = (v) => pt + (1 - v / yMax) * ph;
+  const tl = (v) => (alc ? kfmt(v) : String(v));
+  const quiet = REDUCE || el.__sig === state.vista; el.__sig = state.vista;
+  const id = 'cd' + (++chartUid);
+  el.textContent = '';
+  const svg = d3.select(el).append('svg').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+    .attr('aria-label', alc
+      ? `${big ? 'Todos los tiers' : 'Tier ' + grupo}: ${fmt(last.acum_real)} views reales contra ${fmt(last.acum_esperado)} esperadas`
+      : `${big ? 'Todos los tiers' : 'Tier ' + grupo}: ${last.acum_entregas} entregas y ${last.acum_compromisos} compromisos de ${plan} del plan, ${last.pendientes} pendientes`);
+  const defs = svg.append('defs');
+  const gl = defs.append('filter').attr('id', 'gl' + id).attr('filterUnits', 'userSpaceOnUse').attr('x', 0).attr('y', 0).attr('width', W).attr('height', H);
+  gl.append('feGaussianBlur').attr('stdDeviation', 3.5).attr('result', 'b');
+  const mg = gl.append('feMerge'); mg.append('feMergeNode').attr('in', 'b'); mg.append('feMergeNode').attr('in', 'SourceGraphic');
+  d3.ticks(0, yMax, 4).filter((v) => alc || v < plan * 0.88).forEach((v) => {
+    svg.append('line').attr('x1', pl).attr('x2', W - pr).attr('y1', Y(v)).attr('y2', Y(v)).attr('stroke', 'rgba(255,255,255,.08)').attr('stroke-dasharray', '2 5');
+    svg.append('text').attr('x', pl - 10).attr('y', Y(v) + 4).attr('text-anchor', 'end').text(tl(v));
+  });
+  if (!alc) {
+    svg.append('line').attr('x1', pl).attr('x2', W - pr).attr('y1', Y(plan)).attr('y2', Y(plan)).attr('stroke', 'rgba(255,255,255,.42)').attr('stroke-dasharray', '5 5');
+    const cw = 8 * ('Meta ' + plan).length + 8;
+    const chip = svg.append('g').attr('transform', `translate(${pl},${Y(plan) - 12})`);
+    chip.append('rect').attr('width', cw).attr('height', 20).attr('y', -10).attr('rx', 10).attr('fill', '#0a0a0a').attr('stroke', 'rgba(255,255,255,.28)');
+    chip.append('text').attr('x', cw / 2).attr('y', 4).attr('text-anchor', 'middle').style('fill', 'rgba(255,255,255,.82)').attr('font-weight', 600).text('Meta ' + plan);
+  }
+  const clip = defs.append('clipPath').attr('id', 'cp' + id).append('rect').attr('x', pl - 8).attr('y', 0).attr('height', H).attr('width', quiet ? W : 0);
+  const g = svg.append('g').attr('clip-path', `url(#cp${id})`);
+  const ln = d3.line().curve(d3.curveMonotoneX).x((s, i) => X(i));
+  const ar = d3.area().curve(d3.curveMonotoneX).x((s, i) => X(i));
+  // amarillo plano hacia abajo de la línea amarilla, igual que la blanca tiene su sombra hacia abajo
+  g.append('path').attr('d', ar.y0(Y(0)).y1((s) => Y(s[kB]))(series)).attr('fill', alc ? 'rgba(245,212,0,.10)' : 'rgba(245,212,0,.16)');
+  // y encima lo que hay entre las dos líneas
+  g.append('path').attr('d', ar.y0((s) => Y(s[kA])).y1((s) => Y(s[kB]))(series)).attr('fill', alc ? 'rgba(245,212,0,.12)' : 'rgba(255,255,255,.08)');
+  const lineA = g.append('path').attr('d', ln.y((s) => Y(s[kA]))(series)).attr('fill', 'none').attr('stroke', alc ? GREEN : 'rgba(255,255,255,.92)').attr('stroke-width', alc ? 2.6 : 2.2).attr('stroke-linecap', 'round');
+  if (alc) lineA.attr('stroke-dasharray', '2 6');
+  g.append('path').attr('d', ln.y((s) => Y(s[kB]))(series)).attr('fill', 'none').attr('stroke', '#f5d400').attr('stroke-width', 3.4).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round').attr('filter', `url(#gl${id})`);
+  if (!quiet) clip.transition().duration(1300).ease(d3.easeCubicOut).attr('width', W);
+  // extremo y rótulos directos, sin leyenda que descifrar
+  const tail = svg.append('g').style('opacity', quiet ? 1 : 0);
+  tail.append('circle').attr('class', 'pulse').attr('cx', X(N - 1)).attr('cy', Y(last[kB])).attr('r', 6).attr('fill', 'none').attr('stroke', '#f5d400').attr('stroke-width', 2);
+  tail.append('circle').attr('cx', X(N - 1)).attr('cy', Y(last[kA])).attr('r', 4).attr('fill', '#0a0a0a').attr('stroke', alc ? GREEN : '#fff').attr('stroke-width', 2);
+  tail.append('circle').attr('cx', X(N - 1)).attr('cy', Y(last[kB])).attr('r', 5.5).attr('fill', '#f5d400').attr('stroke', '#0a0a0a').attr('stroke-width', 2);
+  const gap = big ? 34 : 18;
+  const labs = [
+    { v: tl(last[kA]), t: alc ? 'esperadas' : 'comprometidos', y: Y(last[kA]), c: alc ? GREEN : '#fff' },
+    { v: tl(last[kB]), t: alc ? 'views reales' : 'entregados', y: Y(last[kB]), c: '#f5d400' }
+  ].sort((p, q) => p.y - q.y);
+  if (labs[1].y - labs[0].y < gap) { const m = (labs[0].y + labs[1].y) / 2; labs[0].y = m - gap / 2; labs[1].y = m + gap / 2; }
+  labs.forEach((l) => {
+    const gg = tail.append('g').attr('transform', `translate(${W - pr + 12},${l.y})`);
+    gg.append('text').attr('y', big ? 0 : 5).attr('font-size', 15).attr('font-weight', 800).style('fill', l.c).text(l.v);
+    if (big) gg.append('text').attr('y', 13).attr('font-size', 10.5).style('fill', 'rgba(255,255,255,.62)').text(l.t);
+  });
+  if (!quiet) tail.transition().delay(1000).duration(400).style('opacity', 1);
+  const nt = W < 520 ? 4 : big ? 7 : 5;
+  d3.range(nt).map((k) => Math.round(k * (N - 1) / (nt - 1))).forEach((i, k) => {
+    svg.append('text').attr('x', X(i)).attr('y', H - 6).attr('text-anchor', k === nt - 1 ? 'end' : k === 0 ? 'start' : 'middle').text(dlabel(series[i].fecha));
+  });
+  // lectura al apuntar
+  const hov = svg.append('g').style('display', 'none').style('pointer-events', 'none');
+  const hl = hov.append('line').attr('y1', pt - 6).attr('y2', H - pb).attr('stroke', 'rgba(245,212,0,.7)').attr('stroke-dasharray', '4 4');
+  const hc1 = hov.append('circle').attr('r', 5).attr('fill', '#0a0a0a').attr('stroke', alc ? GREEN : '#fff').attr('stroke-width', 2.5);
+  const hc2 = hov.append('circle').attr('r', 6.5).attr('fill', '#f5d400').attr('stroke', '#0a0a0a').attr('stroke-width', 2.5);
+  const tip = d3.select(el).append('div').attr('class', 'tip fix');
+  const svgNode = svg.node();
+  const show = (ev) => {
+    const r = svgNode.getBoundingClientRect(), sx = (ev.clientX - r.left) * W / r.width;
+    let i = Math.round((sx - pl) / (pw / (N - 1 || 1)));
+    i = Math.max(0, Math.min(N - 1, i));
+    const s = series[i], x = X(i);
+    hov.style('display', null);
+    hl.attr('x1', x).attr('x2', x);
+    hc1.attr('cx', x).attr('cy', Y(s[kA]));
+    hc2.attr('cx', x).attr('cy', Y(s[kB]));
+    tip.text('');
+    tip.append('div').attr('class', 'd').text(dlabel(s.fecha));
+    if (alc) {
+      const t1 = tip.append('div'); t1.append('b').text(fmt(s.acum_real)); t1.append('span').attr('class', 'u').text(' views reales');
+      tip.append('div').attr('class', 'ev').text(fmt(s.acum_esperado) + '+ esperadas');
+    } else {
+      const t1 = tip.append('div'); t1.append('b').text(s.acum_entregas); t1.append('span').attr('class', 'u').text(' entregados');
+      tip.append('div').attr('class', 'd').text(s.acum_compromisos + ' comprometidos · ' + s.pendientes + ' pendientes');
+      if (s.entregas) tip.append('div').attr('class', 'g').text('+' + s.entregas + (s.entregas > 1 ? ' entregaron ese día' : ' entregó ese día'));
+    }
+    const left = x * r.width / W < 240;
+    tip.style('left', left ? null : (pl + 10) + 'px').style('right', left ? (pr + 6) + 'px' : null).classed('on', true);
+  };
+  svg.append('rect').attr('x', pl - 14).attr('y', 0).attr('width', pw + 28).attr('height', H).attr('fill', 'transparent')
+    .on('pointermove', show).on('pointerdown', show)
+    .on('pointerleave', () => { tip.classed('on', false); hov.style('display', 'none'); });
+});
+
+dash.draw('rings', (el) => {
+  const t = dash.data('por_tier');
+  if (!okAll('por_tier') || !t.data.length) { failMsg(el, 'por_tier'); return; }
+  const S = 208, c = S / 2, sw = 13, gap = 5, R0 = 96;
+  const tot = d3.sum(t.data, (r) => r.entregadas), pl = d3.sum(t.data, (r) => r.plan), pct = pl ? Math.round(100 * tot / pl) : 0;
+  const quiet = REDUCE || !!el.__drawn; el.__drawn = true;
+  el.textContent = '';
+  const svg = d3.select(el).append('svg').attr('viewBox', `0 0 ${S} ${S}`).attr('role', 'img')
+    .attr('aria-label', 'Avance por tier: ' + t.data.map((r) => `tier ${r.tier} ${r.pct}%`).join(', '));
+  const g = svg.append('g').attr('transform', `translate(${c},${c})`);
+  t.data.forEach((r, i) => {
+    const rad = R0 - i * (sw + gap), arc = d3.arc().innerRadius(rad - sw / 2).outerRadius(rad + sw / 2).startAngle(0).cornerRadius(sw / 2);
+    g.append('path').attr('d', arc({ endAngle: 2 * Math.PI })).attr('fill', 'rgba(255,255,255,.07)');
+    const end = 2 * Math.PI * Math.min(1, r.pct / 100);
+    if (end <= 0) return;
+    const p = g.append('path').attr('fill', tcol(r.tier)).style('filter', `drop-shadow(0 0 5px ${tcol(r.tier)}77)`);
+    if (quiet) p.attr('d', arc({ endAngle: end }));
+    else p.attr('d', arc({ endAngle: 0.0001 })).transition().delay(150 + i * 120).duration(1100).ease(d3.easeCubicOut)
+      .attrTween('d', () => { const ip = d3.interpolateNumber(0.0001, end); return (x) => arc({ endAngle: ip(x) }); });
+  });
+  g.append('text').attr('y', 4).attr('text-anchor', 'middle').attr('font-size', 28).attr('font-weight', 800).attr('letter-spacing', '-0.04em').style('fill', '#fff').text(pct + '%');
+  g.append('text').attr('y', 22).attr('text-anchor', 'middle').attr('font-size', 10).style('fill', 'rgba(255,255,255,.55)').text('del plan');
+});
+
+dash.draw('tiers', (el) => {
+  const t = dash.data('por_tier');
+  if (!okAll('por_tier')) { failMsg(el, 'por_tier'); return; }
+  const quiet = !!el.__drawn; el.__drawn = true;
+  el.textContent = '';
+  const rows = d3.select(el).selectAll('div.tr').data(t.data, (r) => r.tier).join('div').attr('class', 'tr');
+  rows.each(function (r, i) {
+    const s = d3.select(this), c = tcol(r.tier);
+    s.append('span').attr('class', 'tag').style('border-color', c + '88').style('color', c).text('Tier ' + r.tier);
+    const sp = s.append('div').attr('class', 'track').append('span').style('background', c).style('box-shadow', `0 0 14px ${c}66`);
+    grow(sp, Math.min(100, r.pct) + '%', i, quiet);
+    s.append('span').attr('class', 'tn').text(`${r.entregadas} / ${r.plan}`);
+    const tv = s.append('span').attr('class', 'tv');
+    tv.append('b').text(fmt(r.vistas));
+    tv.append('span').text(` views · ${fmt(r.likes)} likes · ${fmt(r.comentarios)} comentarios`);
+  });
+});
+
+dash.draw('ranking', (el) => {
+  const r = dash.data('ranking');
+  if (!okAll('ranking') || !r.data.length) { failMsg(el, 'ranking'); return; }
+  const top = r.data.slice(0, 12), max = d3.max(top, (d) => d.vistas) || 1, avg = d3.mean(r.data, (d) => d.vistas) || 0;
+  const quiet = !!el.__drawn; el.__drawn = true;
+  el.textContent = '';
+  const rows = d3.select(el).selectAll('div.rk').data(top, (d) => d.rp).join('div').attr('class', 'rk');
+  rows.each(function (d, i) {
+    const s = d3.select(this);
+    s.append('span').attr('class', 'ix' + (i < 3 ? ' top' : '')).text(i + 1);
+    const nm = s.append('span').attr('class', 'nm').attr('title', d.rp);
+    nameBtn(nm, d.rp);
+    nm.append('i').text(d.tier);
+    const tr = s.append('div').attr('class', 'track');
+    const sp = tr.append('span').attr('class', i < 3 ? 'pod' : 'rest');
+    grow(sp, Math.max(2, 100 * d.vistas / max) + '%', i, quiet);
+    if (avg < max) tr.append('i').attr('class', 'avg').style('left', (100 * avg / max) + '%');
+    s.append('span').attr('class', 'nv').text(fmt(d.vistas));
+  });
+  const lg = d3.select(el).append('div').attr('class', 'legend');
+  const lgs = lg.append('span');
+  lgs.append('i').attr('class', 'ds');
+  lgs.append('span').text('Promedio de los ' + r.data.length + ' reels leídos: ' + fmt(Math.round(avg)));
+});
+
+dash.draw('n_no', (el) => {
+  const r = dash.data('rps');
+  el.textContent = r.status === 'ok' ? String(r.data.filter((x) => !x.entregado).length) : '—';
+});
+
+dash.draw('tabla', (tb) => {
+  const r = dash.data('rps');
+  if (!okAll('rps')) { tb.replaceChildren(); return; }
+  const key = state.sort;
+  const rows = r.data.filter((x) => state.tier === 'all' || (state.tier === 'no' ? !x.entregado : x.tier === state.tier)).slice().sort((a, b) => {
+    if (key === 'publicado') return (b.publicado || '').localeCompare(a.publicado || '');
+    const av = a[key], bv = b[key];
+    if (av == null && bv == null) return 0;
+    if (av == null) return 1;
+    if (bv == null) return -1;
+    return bv - av;
+  });
+  tb.replaceChildren();
+  const tr = d3.select(tb).selectAll('tr').data(state.expand ? rows : rows.slice(0, TABLE_LIMIT), (d) => d.rp).join('tr')
+    .attr('data-key', (d) => encodeURIComponent(d.rp)).attr('class', (d) => (d.entregado ? null : 'no'));
+  tr.each(function (d) {
+    const s = d3.select(this);
+    nameBtn(s.append('td').attr('class', 'nm'), d.rp);
+    s.append('td').text(d.tier);
+    s.append('td').text(d.sucursal || '—');
+    s.append('td').text(d.publicado ? dlabel(d.publicado) : '—');
+    s.append('td').attr('class', 'n').text(d.seguidores != null ? fmt(d.seguidores) : '—');
+    const num = (v, cls) => s.append('td').attr('class', 'n ' + (cls || '')).text(d.leido && v != null ? fmt(v) : '—');
+    if (d.leido) num(d.vistas, 'hi');
+    else s.append('td').attr('class', 'n na').text(d.entregado ? 'sin lectura' : 'no entregó');
+    num(d.likes); num(d.comentarios); num(d.compartidos);
+    s.append('td').attr('class', 'est').text(d.estado || '—');
+  });
+  if (rows.length > TABLE_LIMIT) {
+    const td = d3.select(tb).append('tr').attr('class', 'moretr').append('td').attr('colspan', 10);
+    td.append('button').attr('type', 'button').attr('class', 'more')
+      .text(state.expand ? 'Ver menos' : 'Ver todos (' + rows.length + ')')
+      .on('click', () => { state.expand = !state.expand; dash.draw('tabla'); });
+  }
+});
+
+dash.draw('faltan', (ul) => {
+  const r = dash.data('rps');
+  if (!okAll('rps')) { ul.replaceChildren(); return; }
+  const rows = r.data.filter((x) => x.entregado && !x.leido);
+  ul.replaceChildren();
+  const li = d3.select(ul).selectAll('li').data(rows, (d) => d.rp).join('li');
+  li.each(function (d) {
+    const s = d3.select(this);
+    nameBtn(s, d.rp);
+    s.append('span').text(` · Tier ${d.tier} — ${d.motivo || 'sin lectura'}`);
+  });
+  if (!rows.length) d3.select(ul).append('li').append('span').text('Todos los reels tienen lectura.');
+});
+
+dash.draw('anomalias', (ul) => {
+  const r = dash.data('rps');
+  if (!okAll('rps')) { ul.replaceChildren(); return; }
+  const rows = r.data.filter((x) => x.leido && x.vistas >= 1000 && x.likes < 10).sort((a, b) => b.vistas - a.vistas);
+  ul.replaceChildren();
+  const li = d3.select(ul).selectAll('li').data(rows, (d) => d.rp).join('li');
+  li.each(function (d) {
+    const s = d3.select(this);
+    nameBtn(s, d.rp);
+    s.append('span').text(` — ${fmt(d.vistas)} views y ${fmt(d.likes)} likes`);
+  });
+  if (!rows.length) d3.select(ul).append('li').append('span').text('Ninguno por ahora.');
+});
+
+dash.draw('esp_tabla', (tb) => {
+  const k = dash.data('esperado');
+  if (k.status !== 'ok') { tb.replaceChildren(); return; }
+  tb.replaceChildren();
+  const tr = d3.select(tb).selectAll('tr').data(k.data, (d) => d.grupo).join('tr');
+  tr.each(function (d) {
+    const s = d3.select(this);
+    s.append('td').text(d.grupo === 'all' ? 'Todos' : 'Tier ' + d.grupo);
+    s.append('td').attr('class', 'n').text(d.con_dato + ' de ' + d.leidos);
+    s.append('td').attr('class', 'n').text(fmt(d.esperado) + '+');
+    s.append('td').attr('class', 'n').text(fmt(d.real));
+    s.append('td').attr('class', 'n ' + (d.veces == null ? '' : d.veces >= 1 ? 'up' : 'dn')).text(d.veces == null ? '—' : d.veces.toFixed(2) + '×');
+    s.append('td').attr('class', 'n').text(d.superaron + ' de ' + d.con_dato);
+    s.append('td').attr('class', 'n').text(d.pct_seg == null ? '—' : Math.round(d.pct_seg) + ' %');
+  });
+});
+
+dash.draw('esp_lista', (ul) => {
+  const p = dash.data('por_rp');
+  if (p.status !== 'ok') { ul.replaceChildren(); return; }
+  const up = ul.dataset.kind === 'up';
+  const rows = p.data.filter((x) => x.leido && x.reel_habitual > 0 && x.vs_habitual != null && (up ? x.vs_habitual > 0 : x.vs_habitual < 0))
+    .sort((a, b) => (up ? b.vs_habitual - a.vs_habitual : a.vs_habitual - b.vs_habitual)).slice(0, 5);
+  ul.replaceChildren();
+  const li = d3.select(ul).selectAll('li').data(rows, (d) => d.rp).join('li');
+  li.each(function (d) {
+    const s = d3.select(this);
+    nameBtn(s, d.rp);
+    s.append('span').text(` — ${fmt(d.vistas)} views · esperaba ${fmt(d.reel_habitual)}+`);
+  });
+  if (!rows.length) d3.select(ul).append('li').append('span').text('Ninguno por ahora.');
+});
+
+const capv = (x, k) => {
+  const c = x.captura;
+  if (!c) return null;
+  if (typeof c[k] === 'number') return c[k];
+  const a = [c.tiktok && c.tiktok[k], c.instagram && c.instagram[k]].filter((v) => typeof v === 'number');
+  return a.length ? d3.sum(a) : null;
+};
+dash.draw('rp_card', (box) => {
+  const p = dash.data('por_rp');
+  box.replaceChildren();
+  if (!state.rp || p.status !== 'ok') return;
+  const r = p.data.find((x) => x.rp === state.rp);
+  if (!r) return;
+  const s = d3.select(box);
+  const sg = (v) => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v) + ' %';
+  const h = s.append('div').attr('class', 'mh');
+  const hl = h.append('div');
+  hl.append('span').attr('class', r.entregado ? 'tag' : 'tag red').text('Tier ' + r.tier + (r.entregado ? '' : ' · no entregó'));
+  hl.append('h3').text(r.rp);
+  hl.append('p').text(r.nombre);
+  h.append('button').attr('class', 'x').attr('type', 'button').attr('aria-label', 'Cerrar tarjeta').text('×').on('click', closeRP);
+  const ms = s.append('div').attr('class', 'ms');
+  const cell = (cls, lab, val) => { const d = ms.append('div').attr('class', cls); d.append('small').text(lab); if (val != null) d.append('b').text(val); return d; };
+  if (r.leido) {
+    cell('wide y', 'Visualizaciones', fmt(r.vistas));
+    const lk = cell('', 'Me gusta', r.likes_ocultos ? 'Ocultos' : fmt(r.likes));
+    if (r.likes_ocultos && r.likes_vistos) lk.append('small').text('se ven ' + fmt(r.likes_vistos) + '+');
+    cell('', 'Comentarios', fmt(r.comentarios));
+    cell('', 'Compartidos', fmt(r.compartidos));
+    cell('', 'Interacción', r.likes_ocultos ? '—' : r.interaccion + ' %');
+    const c = r.captura;
+    if (c) {
+      const reach = typeof c.espectadores === 'number' ? c.espectadores : (c.instagram && c.instagram.espectadores);
+      const t = typeof c.tiempo_prom_s === 'number' ? c.tiempo_prom_s : (c.instagram && c.instagram.tiempo_prom_s);
+      const ig = c.tiktok ? ' (IG)' : '';
+      if (reach != null) cell('s2', 'Personas alcanzadas' + ig, fmt(reach));
+      if (capv(r, 'guardados') != null) cell('', 'Guardados', fmt(capv(r, 'guardados')));
+      if (capv(r, 'reposts') != null) cell('', 'Reposts', fmt(capv(r, 'reposts')));
+      if (capv(r, 'nuevos_seguidores') != null) cell('', 'Seguidores nuevos', fmt(capv(r, 'nuevos_seguidores')));
+      if (t != null) cell('', 'Tiempo prom.' + ig, String(t) + ' s');
+      const pl = [];
+      if (c.vistas_ig != null && c.vistas_fb != null) pl.push('Instagram ' + fmt(c.vistas_ig), 'Facebook ' + fmt(c.vistas_fb));
+      if (c.tiktok && c.instagram) pl.push('TikTok ' + fmt(c.tiktok.vistas), 'Instagram ' + fmt(c.instagram.vistas));
+      if (pl.length) { const d = ms.append('div').attr('class', 'plat'); d.append('small').text('Views por plataforma'); d.append('b').text(pl.join(' · ')); }
+    }
+  } else if (r.entregado) {
+    cell('wide', 'Sin lectura de views: ' + (r.motivo || 'no disponible'), null);
+  } else {
+    cell('wide', 'Todavía no entrega su video' + (r.estado ? ' · ' + r.estado : ''), null);
+  }
+  if (r.leido) {
+    const base = p.data.filter((x) => x.leido && x.vistas > 0);
+    const defs = [
+      ['Me gusta', (x) => (x.likes_ocultos ? null : x.likes)],
+      ['Comentarios', (x) => x.comentarios],
+      ['Compartidos', (x) => x.compartidos],
+      ['Guardados', (x) => capv(x, 'guardados')],
+      ['Reposts', (x) => capv(x, 'reposts')]
+    ];
+    const per = (x, f) => { const v = f(x); return v == null ? null : 1000 * v / x.vistas; };
+    const f1 = (v) => String(Math.round(v * 10) / 10);
+    const gr = defs.map(([lab, f]) => {
+      const a = base.map((x) => per(x, f)).filter((v) => v != null);
+      return { lab: lab, own: per(r, f), avg: a.length ? d3.mean(a) : null };
+    }).filter((d) => d.own != null);
+    if (gr.length) {
+      const wrap = s.append('div').attr('class', 'rpch');
+      wrap.append('h4').attr('class', 'mt').text('Su reel en una gráfica');
+      wrap.append('p').attr('class', 'note').text('Por cada 1,000 views. Barra amarilla: este reel. Raya blanca: promedio de los reels leídos (en guardados y reposts, de los RPs que mandaron capturas).' + (r.likes_ocultos ? ' Sus me gusta están ocultos en Instagram, por eso no salen.' : ''));
+      const W = Math.max(280, wrap.node().clientWidth || 640), rh = 38, pt = 6, H = pt + gr.length * rh + 4;
+      const lw = W < 420 ? 92 : 118, rw = W < 420 ? 122 : 150, x0 = lw, x1 = W - rw;
+      const svg = wrap.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H).attr('role', 'img')
+        .attr('aria-label', 'Su reel por cada 1,000 views: ' + gr.map((d) => d.lab + ' ' + f1(d.own) + (d.avg != null ? ' (promedio ' + f1(d.avg) + ')' : '')).join(', '));
+      gr.forEach((d, i) => {
+        const y = pt + i * rh + rh / 2;
+        const mx = Math.max(d.own, d.avg || 0, 0.1) * 1.12;
+        const X = (v) => x0 + (x1 - x0) * v / mx;
+        svg.append('text').attr('x', 0).attr('y', y + 4).attr('fill', '#ffffff').attr('font-size', 13).text(d.lab);
+        svg.append('rect').attr('x', x0).attr('y', y - 7).attr('width', x1 - x0).attr('height', 14).attr('rx', 7).attr('fill', 'rgba(255,255,255,.08)');
+        svg.append('rect').attr('x', x0).attr('y', y - 7).attr('width', Math.max(4, X(d.own) - x0)).attr('height', 14).attr('rx', 7).attr('fill', '#f5d400');
+        if (d.avg != null) svg.append('line').attr('x1', X(d.avg)).attr('x2', X(d.avg)).attr('y1', y - 12).attr('y2', y + 12).attr('stroke', '#ffffff').attr('stroke-width', 2);
+        const tx = svg.append('text').attr('x', W).attr('y', y + 4).attr('text-anchor', 'end').attr('font-size', 13);
+        tx.append('tspan').attr('fill', '#ffffff').attr('font-weight', 700).text(f1(d.own));
+        if (d.avg != null) tx.append('tspan').attr('fill', 'rgba(255,255,255,.62)').text('  prom. ' + f1(d.avg));
+      });
+    }
+  }
+  const cols = s.append('div').attr('class', 'cols');
+  const section = (title, rows) => {
+    const ok = rows.filter((x) => x[1] != null && x[1] !== '');
+    if (!ok.length) return;
+    const c = cols.append('div');
+    c.append('h4').attr('class', 'mt').text(title);
+    const dl = c.append('dl').attr('class', 'md');
+    ok.forEach(([k, v]) => { dl.append('dt').text(k); dl.append('dd').text(v); });
+  };
+  if (r.leido) {
+    section('Desempeño', [
+      ['Lugar en el ranking', '#' + r.posicion + ' de ' + r.leidos_total],
+      ['Lugar en su tier', r.posicion_tier ? '#' + r.posicion_tier + ' de ' + r.tier_total : null],
+      ['Vs. promedio general', sg(r.vs_promedio)],
+      ['Vs. promedio de su tier', sg(r.vs_tier)],
+      ['Views por día', r.vistas_dia != null ? fmt(r.vistas_dia) : null],
+      ['Views / seguidores', r.alcance_seg != null ? r.alcance_seg + ' %' : null],
+      ['Likes por 100 views', r.likes_100 != null && !r.likes_ocultos ? String(r.likes_100) : null],
+      ['Comentarios por 1,000 views', r.coment_1000 != null ? String(r.coment_1000) : null],
+      ['Vs. sus views habituales', r.vs_habitual != null ? sg(r.vs_habitual) + ' (' + fmt(r.reel_habitual) + '+)' : null]
+    ]);
+  }
+  section('Trayectoria', [
+    ['Respondió el formulario', r.respondio ? dlabel(r.respondio) : null],
+    ['Se comprometió', r.se_comprometio ? 'Sí' : (r.entregado ? null : 'No')],
+    ['Fecha comprometida', r.comprometido ? dlabel(r.comprometido) : null],
+    ['Prórroga hasta', r.prorroga ? dlabel(r.prorroga) : null],
+    ['Publicó', r.publicado ? dlabel(r.publicado) : null],
+    ['Días del formulario al video', r.dias_formulario != null ? String(r.dias_formulario) : null],
+    ['Estado', r.estado]
+  ]);
+  section('Perfil', [
+    ['Sucursal', r.sucursal],
+    ['Instagram', r.usuario ? '@' + r.usuario : null],
+    ['Seguidores IG', r.seguidores != null ? fmt(r.seguidores) : null],
+    ['Siguiendo', r.siguiendo != null ? fmt(r.siguiendo) : null],
+    ['Publicaciones', r.publicaciones != null ? fmt(r.publicaciones) : null],
+    ['Seguidores IG que reportó', r.seg_ig != null ? segTxt(r.seg_ig) : null],
+    ['Seguidores TikTok (rango)', r.seg_tt != null ? segTxt(r.seg_tt) : null],
+    ['Views habituales (reels)', r.reel_habitual != null ? fmt(r.reel_habitual) + '+' : null],
+    ['Views habituales (stories)', r.stories != null ? fmt(r.stories) + '+' : null]
+  ]);
+  s.append('h4').attr('class', 'mt').text('Su guion');
+  const ft = s.append('div').attr('class', 'mf');
+  const props = [];
+  String(r.guion || '').split('\n').forEach((ln) => {
+    if (ln.startsWith('## ')) props.push({ t: ln.slice(3), p: [] });
+    else if (ln.trim() && props.length) props[props.length - 1].p.push(ln);
+  });
+  if (!props.length) {
+    ft.append('p').attr('class', 'note').text('Todavía no hay guion de este RP en el portal.');
+  } else {
+    const det = ft.append('details').attr('class', 'gd');
+    det.append('summary').text(props.length === 1 ? 'Ver su guion' : 'Ver sus ' + props.length + ' propuestas de guion');
+    const gz = det.append('div').attr('class', 'gz');
+    props.forEach((pr) => {
+      gz.append('h5').text(pr.t);
+      pr.p.forEach((x) => gz.append('p').text(x));
+    });
+  }
+  if (r.reel && /^https:\/\/(www\.)?instagram\.com\//.test(r.reel)) {
+    ft.append('a').attr('class', 'btn').attr('href', r.reel).attr('target', '_blank').attr('rel', 'noopener').text('Ver reel en Instagram');
+  }
+});
+
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && state.rp) closeRP(); });
+document.querySelectorAll('.hg #rpov').forEach((ov) => {
+  ov.addEventListener('click', (e) => { if (e.target === ov) closeRP(); });
+});
+document.querySelectorAll('.hg .chip').forEach((b) => {
+  b.addEventListener('click', () => {
+    state.tier = b.dataset.tier; state.expand = false;
+    document.querySelectorAll('.hg .chip').forEach((o) => o.classList.toggle('on', o === b));
+    dash.draw('tabla');
+  });
+});
+document.querySelectorAll('.hg #orden').forEach((s) => {
+  s.addEventListener('change', () => { state.sort = s.value; dash.draw('tabla'); });
+});
+document.querySelectorAll('.hg .sg').forEach((b) => {
+  b.addEventListener('click', () => {
+    state.vista = b.dataset.vista;
+    document.querySelectorAll('.hg .sg').forEach((o) => o.classList.toggle('on', o === b));
+    document.querySelectorAll('.hg [data-only]').forEach((e) => { e.hidden = e.dataset.only !== state.vista; });
+    dash.draw('tsub');
+    dash.draw('chart_dias');
+  });
+});
+</script>
