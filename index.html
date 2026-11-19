@@ -88,6 +88,10 @@ window.dash={
 .hg .rk .nm .lk{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
 .hg .ov{position:absolute;inset:0;background:rgba(0,0,0,.62);z-index:10}
 .hg .ov[hidden]{display:none}
+.hg .ov.pin{position:fixed;touch-action:none}
+.hg .ov.pin .mbox{position:fixed;top:50%;left:50%;right:auto;margin:0;transform:translate(-50%,-50%);width:min(960px,calc(100% - 24px));max-height:calc(100vh - 24px);touch-action:pan-y}
+.hg .mbox{overscroll-behavior:contain}
+html.hg-lock,html.hg-lock body{overflow:hidden!important}
 .hg .ov,.hg .ov *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 .hg .ms .s2{grid-column:span 2}
 .hg .ms .plat{grid-column:1/-1}
@@ -540,25 +544,62 @@ const grow = (sp, w, i, quiet) => {
 };
 let chartUid = 0;
 const segTxt = (v) => (v == null ? 'sin dato' : v === 0 ? 'menos de 1,000' : fmt(v) + '+');
+const pageLocks = [];
+function unlockPage() {
+  document.documentElement.classList.remove('hg-lock');
+  while (pageLocks.length) { const [n, v] = pageLocks.pop(); n.style.overflowY = v; }
+}
+function lockPage() {
+  unlockPage();
+  document.documentElement.classList.add('hg-lock');
+  for (let n = document.querySelector('.hg'); n && n !== document.documentElement; n = n.parentElement) {
+    const oy = getComputedStyle(n).overflowY;
+    if (oy === 'auto' || oy === 'scroll') { pageLocks.push([n, n.style.overflowY]); n.style.overflowY = 'hidden'; }
+  }
+}
+function scrollRoom(el, dy) {
+  const box = document.getElementById('rpbox');
+  for (let n = el; n && n.nodeType === 1; n = n.parentElement) {
+    if (n.scrollHeight > n.clientHeight + 1) {
+      const oy = getComputedStyle(n).overflowY;
+      if ((oy === 'auto' || oy === 'scroll') && (dy < 0 ? n.scrollTop > 0 : n.scrollTop + n.clientHeight < n.scrollHeight - 1)) return true;
+    }
+    if (n === box) break;
+  }
+  return false;
+}
 function closeRP() {
   state.rp = null;
   const ov = document.getElementById('rpov');
-  if (ov) ov.hidden = true;
+  if (ov) { ov.hidden = true; ov.classList.remove('pin'); }
+  unlockPage();
 }
 function openRP(name, ev) {
   state.rp = name;
   const ov = document.getElementById('rpov');
   if (!ov) return;
   const hg = ov.parentElement, box = document.getElementById('rpbox');
+  const vh = window.innerHeight || 800;
+  const scrolls = hg.offsetHeight > vh + 40;
   box.style.visibility = 'hidden';
+  box.style.top = '';
+  ov.classList.toggle('pin', scrolls);
   ov.hidden = false;
+  lockPage();
   dash.draw('rp_card');
   requestAnimationFrame(() => {
-    const hr = hg.getBoundingClientRect(), vh = window.innerHeight || 800;
-    const scrolls = hg.offsetHeight > vh + 40;
     box.scrollTop = 0;
-    const cy = scrolls || !ev ? vh / 2 - hr.top : ev.clientY - hr.top;
-    box.style.top = Math.max(12, Math.min(cy - box.offsetHeight / 2, hg.offsetHeight - box.offsetHeight - 12)) + 'px';
+    let pinned = scrolls;
+    if (pinned) {
+      const b = box.getBoundingClientRect();
+      pinned = b.top >= -1 && b.bottom <= vh + 1 && b.left >= -1 && b.right <= (window.innerWidth || 1200) + 1;
+    }
+    if (!pinned) {
+      ov.classList.remove('pin');
+      const hr = hg.getBoundingClientRect();
+      const cy = scrolls || !ev ? vh / 2 - hr.top : ev.clientY - hr.top;
+      box.style.top = Math.max(12, Math.min(cy - box.offsetHeight / 2, hg.offsetHeight - box.offsetHeight - 12)) + 'px';
+    }
     box.style.visibility = '';
     const x = box.querySelector('.x');
     if (x) x.focus({ preventScroll: true });
@@ -1032,7 +1073,28 @@ dash.draw('rp_card', (box) => {
   }
 });
 
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && state.rp) closeRP(); });
+document.addEventListener('keydown', (e) => {
+  if (!state.rp) return;
+  if (e.key === 'Escape') { closeRP(); return; }
+  if (!['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(e.key) || e.ctrlKey || e.metaKey || e.altKey) return;
+  const t = e.target;
+  if (e.key === ' ' && t && /^(BUTTON|SUMMARY|INPUT|SELECT|TEXTAREA|A)$/.test(t.tagName)) return;
+  const up = e.key === 'ArrowUp' || e.key === 'PageUp' || e.key === 'Home' || (e.key === ' ' && e.shiftKey);
+  if (!scrollRoom(t && t.nodeType === 1 ? t : document.getElementById('rpbox'), up ? -1 : 1)) e.preventDefault();
+});
+document.addEventListener('wheel', (e) => {
+  if (!state.rp || e.ctrlKey) return;
+  if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { if (!document.getElementById('rpbox').contains(e.target)) e.preventDefault(); return; }
+  if (!scrollRoom(e.target, e.deltaY)) e.preventDefault();
+}, { passive: false });
+let touchY = 0;
+document.addEventListener('touchstart', (e) => { if (e.touches.length) touchY = e.touches[0].clientY; }, { passive: true });
+document.addEventListener('touchmove', (e) => {
+  if (!state.rp || e.touches.length !== 1) return;
+  const y = e.touches[0].clientY, dy = touchY - y;
+  touchY = y;
+  if (dy && !scrollRoom(e.target, dy) && e.cancelable) e.preventDefault();
+}, { passive: false });
 document.querySelectorAll('.hg #rpov').forEach((ov) => {
   ov.addEventListener('click', (e) => { if (e.target === ov) closeRP(); });
 });
