@@ -21,7 +21,7 @@ O abre `index.html` en el navegador. Funciona sin servidor y sin conexión: los 
 | `rps.json` | Un renglón por RP del plan (54): tier, sucursal, estado, vistas, likes, comentarios, compartidos, perfil, guion y capturas. Incluye `meta` con la fuente de cada dato |
 | `plan.json` | Cuántos RPs lleva cada tier: A 20, B 15, C 12, D 7 |
 | `d3.min.js` | d3 v7, para que abra sin internet |
-| `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` | El mismo ícono que usa la página de RPs de la Carrera Hangar |
+| `favicon.svg`, `favicon-32-dark.png`, `favicon-32-light.png`, `apple-touch-icon.png` | El isotipo de Ingenioso (el de la página de RPs), solo el vector y sin fondo: amarillo y blanco en pestañas oscuras, todo negro en pestañas claras (el SVG cambia solo con `prefers-color-scheme`; los PNG son el respaldo) |
 
 ## De dónde salen los números
 
