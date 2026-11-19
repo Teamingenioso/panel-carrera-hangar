@@ -446,7 +446,6 @@ html.hg-lock,html.hg-lock body{overflow:hidden!important}
       <button class="chip" type="button" data-tier="D">Tier D</button>
       <button class="chip tfc" type="button" data-tier="tf">✓ En tiempo y forma (<span data-draw="n_tf" data-source="rps" data-estado="ok">—</span>)</button>
       <button class="chip" type="button" data-tier="tarde">Fuera de plazo (<span data-draw="n_tf" data-source="rps" data-estado="tarde">—</span>)</button>
-      <button class="chip" type="button" data-tier="conf">Por confirmar (<span data-draw="n_tf" data-source="rps" data-estado="confirmar">—</span>)</button>
       <button class="chip red" type="button" data-tier="no">No entregaron (<span data-draw="n_no" data-source="rps">—</span>)</button>
       <select class="dash-select" id="orden" aria-label="Ordenar por">
         <option value="vistas">Ordenar: visualizaciones</option>
@@ -484,7 +483,7 @@ html.hg-lock,html.hg-lock body{overflow:hidden!important}
     <h2>Cómo se leen estos números</h2>
     <p>Las visualizaciones, likes, comentarios y compartidos salen de leer cada reel en Instagram: el 18 nov 2026, 5:40 p. m. (hora de CDMX) para la mayoría, y el 19 nov, de madrugada, para Sandy, Diego y Javier. Para 33 RPs (16 de tier A, 5 de tier B, 7 de tier C y 5 de tier D) se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov (entre 11:45 a. m. y 4:34 p. m.): son los números de su propia cuenta, por eso ya no hay likes ocultos en esos reels. Es una sola foto: todavía no hay comparación de crecimiento entre lecturas. Los seguidores salen del perfil público de cada RP el mismo día de su lectura (Instagram redondea las cifras grandes). Las entregas, los formularios y las fechas comprometidas salen de la base de RPs en Notion y del portal. El plan es de 54 RPs: tier A 20, B 15, C 12 y D 7.</p>
     <p>Compromiso: un RP cuenta como comprometido desde el día que respondió el formulario con compromiso. Si no hay fecha del formulario se usa el día que publicó, o su fecha comprometida. Los pendientes son los comprometidos que todavía no entregan. Los que aparecen en rojo no han entregado: a unos ya se les venció la fecha y otros no se comprometieron.</p>
-    <p>La marca ✓ junto al nombre es para quien mandó sus métricas en tiempo y forma: capturas de estadísticas enviadas el 19 nov antes de las 4:00 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado. Hoy son 22 de los 33 que mandaron capturas. No llevan marca quienes mandaron después de las 4:00 p. m., ni quienes mandaron capturas incompletas o sin confirmar; en la tarjeta de cada uno se explica por qué. Sin la marca no se participa en el premio. Por confirmar son los casos dudosos (por ejemplo, capturas sin la pantalla de estadísticas o sin link del reel): hasta confirmarlos no cuentan.</p>
+    <p>La marca ✓ junto al nombre es para quien mandó sus métricas en tiempo y forma: capturas de estadísticas enviadas el 19 nov antes de las 4:00 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado. Hoy son 26 de los 33 que mandaron capturas. No llevan marca quienes mandaron después de las 4:00 p. m.; en la tarjeta de cada uno se explica por qué. Ingenioso dio por buenos los casos de Vianey, Anahí, Paloma y Nereyda aunque sus capturas llegaron incompletas o sin hora o link. Sin la marca no se participa en el premio.</p>
   </section>
 
   <div class="ov" id="rpov" hidden>
@@ -980,7 +979,7 @@ dash.draw('tabla', (tb) => {
   const r = dash.data('rps');
   if (!okAll('rps')) { tb.replaceChildren(); return; }
   const key = state.sort;
-  const rows = r.data.filter((x) => state.tier === 'all' || (state.tier === 'no' ? !x.entregado : state.tier === 'tf' ? !!x.a_tiempo_forma : state.tier === 'tarde' ? x.tf_estado === 'tarde' : state.tier === 'conf' ? x.tf_estado === 'confirmar' : x.tier === state.tier)).slice().sort((a, b) => {
+  const rows = r.data.filter((x) => state.tier === 'all' || (state.tier === 'no' ? !x.entregado : state.tier === 'tf' ? !!x.a_tiempo_forma : state.tier === 'tarde' ? x.tf_estado === 'tarde' : x.tier === state.tier)).slice().sort((a, b) => {
     if (key === 'publicado') return (b.publicado || '').localeCompare(a.publicado || '');
     const av = a[key], bv = b[key];
     if (av == null && bv == null) return 0;
@@ -1098,7 +1097,6 @@ dash.draw('rp_card', (box) => {
   const est = r.tf_estado || (r.entregado && !r.captura ? 'sin' : null);
   if (est === 'ok') hl.append('span').attr('class', 'tag tf').text('✓ En tiempo y forma');
   else if (est === 'tarde') hl.append('span').attr('class', 'tag red').style('margin-left', '6px').text('Fuera de plazo');
-  else if (est === 'confirmar') hl.append('span').attr('class', 'tag w').style('margin-left', '6px').text('Por confirmar');
   else if (est === 'sin') hl.append('span').attr('class', 'tag w').style('margin-left', '6px').text('Sin métricas');
   hl.append('h3').text(r.rp);
   hl.append('p').text(r.nombre);
@@ -1107,9 +1105,8 @@ dash.draw('rp_card', (box) => {
     const hr = r.captura && h12(r.captura.hora);
     const mot = String(r.tf_motivo || '').replace(/\.$/, '');
     const ini = hr ? 'Capturas enviadas el 19 nov a las ' + hr + ' · ' : '';
-    const txt = est === 'ok' ? ini + 'en tiempo y forma: participa en el premio.'
+    const txt = est === 'ok' ? (ini ? ini + 'en tiempo y forma' : 'En tiempo y forma') + ': participa en el premio.'
       : est === 'tarde' ? ini + 'fuera de plazo, después de las 4:00\u00a0p.\u00a0m.: no participa en el premio.'
-      : est === 'confirmar' ? (hr ? ini + mot : cap1(mot)) + '. Hasta confirmarlo, no cuenta para el premio.'
       : 'No mandó sus capturas de métricas: no participa en el premio.';
     hl.append('p').attr('class', 'tfn' + (est === 'ok' ? ' ok' : '')).text(txt);
   }

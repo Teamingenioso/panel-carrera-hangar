@@ -27,7 +27,7 @@ O abre `index.html` en el navegador. Funciona sin servidor y sin conexión: los 
 
 - Lectura de cada reel en Instagram el 18 y 19 de noviembre de 2026.
 - Para 33 RPs (16 de tier A, 5 de tier B, 7 de tier C y 5 de tier D), las capturas de estadísticas que ellos mismos mandaron el 19 de noviembre (entre 11:45 a. m. y 4:34 p. m.). Son los números de su propia cuenta.
-- La marca ✓ junto al nombre señala a quien mandó sus métricas en tiempo y forma (sin ella no se participa en el premio): capturas de estadísticas enviadas el 19 de noviembre antes de las 4:00 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado (22 de los 33: 13 de tier A, 2 de B, 5 de C y 2 de D). En `rps.json` es el campo `a_tiempo_forma`; `tf_estado` dice en qué quedó cada RP que mandó capturas: `ok`, `tarde` (después de las 4:00 p. m.) o `confirmar` (capturas incompletas o sin confirmar), y `tf_motivo` explica por qué.
+- La marca ✓ junto al nombre señala a quien mandó sus métricas en tiempo y forma (sin ella no se participa en el premio): capturas de estadísticas enviadas el 19 de noviembre antes de las 4:00 p. m. y con el reel identificado (26 de los 33: 14 de tier A, 3 de B, 6 de C y 3 de D). Ingenioso dio por buenos los casos de Vianey, Anahí, Paloma y Nereyda aunque sus capturas llegaron incompletas o sin hora o link. En `rps.json` es el campo `a_tiempo_forma`; `tf_estado` dice en qué quedó cada RP que mandó capturas: `ok` o `tarde` (después de las 4:00 p. m.), y `tf_motivo` explica por qué.
 - Seguidores, siguiendo y publicaciones del perfil público de cada RP. Instagram redondea las cifras grandes.
 
 ## Datos de personas

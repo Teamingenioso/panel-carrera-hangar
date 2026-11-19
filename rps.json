@@ -524,8 +524,9 @@
     },
     "nota": "Mismo video publicado en TikTok e Instagram; vistas, likes, comentarios y compartidos suman las dos plataformas"
    },
-   "tf_motivo": "No tengo registrada la hora a la que mandó sus capturas.",
-   "tf_estado": "confirmar"
+   "tf_motivo": "Ingenioso confirmó que aplica (antes por confirmar: No tengo registrada la hora a la que mandó sus capturas).",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   },
   {
    "rp": "Nilka Castillo",
@@ -1104,8 +1105,9 @@
     "fuente": "Capturas del reel y de su perfil enviadas por el RP (sin pantalla de estadísticas)",
     "hora": "14:29"
    },
-   "tf_motivo": "capturas de su perfil y del reel, sin la pantalla de estadísticas.",
-   "tf_estado": "confirmar"
+   "tf_motivo": "Ingenioso confirmó que aplica (antes por confirmar: capturas de su perfil y del reel, sin la pantalla de estadísticas).",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   },
   {
    "rp": "Angie Marcela",
@@ -1935,10 +1937,11 @@
     "reposts": 0,
     "nuevos_seguidores": 0,
     "tiempo_prom_s": 17,
-    "nota": "Reel publicado hoy 19 nov (como a las 2:50 p. m., por la gráfica de la primera hora). No mandó link ni usuario; falta confirmar que es el reel de la campaña."
+    "nota": "Reel publicado hoy 19 nov (como a las 2:50 p. m., por la gráfica de la primera hora). No mandó link ni usuario; se da por buena como el reel de la campaña."
    },
-   "tf_motivo": "sin link ni usuario, falta confirmar que es el reel de la campaña.",
-   "tf_estado": "confirmar"
+   "tf_motivo": "Ingenioso confirmó que aplica (antes por confirmar: sin link ni usuario, falta confirmar que es el reel de la campaña).",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   },
   {
    "rp": "Vanessa Rivera",
@@ -2098,10 +2101,11 @@
     "fecha": "2026-11-19",
     "fuente": "Capturas de Instagram enviadas por el RP",
     "hora": "13:55",
-    "nota": "Mandó una sola captura, la pantalla de me gusta y views: 4 me gusta y 47 views, sin la pantalla de estadísticas. No muestra fecha ni link; falta confirmar que es el reel de la campaña."
+    "nota": "Mandó una sola captura, la pantalla de me gusta y views: 4 me gusta y 47 views, sin la pantalla de estadísticas. No muestra fecha ni link; se da por buena como el reel de la campaña."
    },
-   "tf_motivo": "solo la pantalla de me gusta y views, sin la pantalla de estadísticas.",
-   "tf_estado": "confirmar"
+   "tf_motivo": "Ingenioso confirmó que aplica (antes por confirmar: solo la pantalla de me gusta y views, sin la pantalla de estadísticas).",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   }
  ],
  "meta": [
@@ -2127,11 +2131,11 @@
   },
   {
    "label": "Capturas de los RPs",
-   "value": "33 RPs mandaron capturas de su reel el 19 nov 2026: 16 de tier A (de 20), 5 de tier B (Eddy, Vianey, Chris, Lilia y Juan Andrés), 7 de tier C y 5 de tier D. Con ellas se corrigieron views, likes, comentarios y compartidos, se resolvieron los likes ocultos de Miranda Becerra (154), Sandy Cámara (30), Faumery Cardiel (127), Karen Mayo (88) y Juan Andrés Acopa (40) y se leyeron los reels de Eddy, Vianey y Scarlett, que no se podían abrir. Vianey mandó capturas de su perfil y del reel, sin pantalla de estadísticas. Paloma Morales publicó su reel hoy, 19 nov, como a las 2:50 p. m.; no mandó link ni usuario y se cuenta como entregado hasta confirmar que es el reel de la campaña. Anahí Carrillo mandó solo la pantalla de me gusta y views (4 me gusta, 47 views), sin fecha ni link, y también se cuenta como entregada hasta confirmar. Las capturas de Miranda Hernández muestran 13,065 views contra 4,399 de la lectura del 18 nov y una gráfica que empieza el 11 nov: falta confirmar que es el mismo reel. En tier A faltan Aritzy e Ingrid (entregaron, no mandaron) y Chris y Lurline (no entregaron)."
+   "value": "33 RPs mandaron capturas de su reel el 19 nov 2026: 16 de tier A (de 20), 5 de tier B (Eddy, Vianey, Chris, Lilia y Juan Andrés), 7 de tier C y 5 de tier D. Con ellas se corrigieron views, likes, comentarios y compartidos, se resolvieron los likes ocultos de Miranda Becerra (154), Sandy Cámara (30), Faumery Cardiel (127), Karen Mayo (88) y Juan Andrés Acopa (40) y se leyeron los reels de Eddy, Vianey y Scarlett, que no se podían abrir. Vianey mandó capturas de su perfil y del reel, sin pantalla de estadísticas. Paloma Morales publicó su reel hoy, 19 nov, como a las 2:50 p. m.; no mandó link ni usuario y se da por buena como el reel de la campaña. Anahí Carrillo mandó solo la pantalla de me gusta y views (4 me gusta, 47 views), sin fecha ni link, y también se da por buena. Las capturas de Miranda Hernández muestran 13,065 views contra 4,399 de la lectura del 18 nov y una gráfica que empieza el 11 nov: falta confirmar que es el mismo reel. En tier A faltan Aritzy e Ingrid (entregaron, no mandaron) y Chris y Lurline (no entregaron)."
   },
   {
    "label": "En tiempo y forma",
-   "value": "22 de los 33 RPs que mandaron capturas lo hicieron en tiempo y forma (13 de tier A, 2 de tier B, 5 de tier C y 2 de tier D): capturas de estadísticas enviadas el 19 nov antes de las 4:00 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado. Sin esta marca no se participa en el premio. Quedan sin marca por mandar después de las 4:00 p. m.: Eli, Lilia, Scarlett, Miranda Hernández, Faumery, Juan Andrés y Karen Mayo; por mandar capturas incompletas o sin confirmar: Vianey, Anahí, Paloma y Nereyda (sin hora registrada)."
+   "value": "26 de los 33 RPs que mandaron capturas lo hicieron en tiempo y forma (14 de tier A, 3 de tier B, 6 de tier C y 3 de tier D): capturas enviadas el 19 nov antes de las 4:00 p. m. y con el reel identificado. Sin esta marca no se participa en el premio. Quedan sin marca por mandar después de las 4:00 p. m.: Eli, Lilia, Scarlett, Miranda Hernández, Faumery, Juan Andrés y Karen Mayo. Ingenioso confirmó que Vianey, Anahí, Paloma y Nereyda sí aplican, aunque sus capturas llegaron incompletas o sin hora o link."
   }
  ]
 }
