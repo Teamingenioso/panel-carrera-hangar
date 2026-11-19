@@ -437,7 +437,7 @@ html.hg-lock,html.hg-lock body{overflow:hidden!important}
   <section class="card sec" id="detalle">
     <h2>Detalle por persona</h2>
     <p class="note" style="margin-top:6px">Toca un nombre para abrir su tarjeta con todos sus datos.</p>
-    <p class="tfn"><span class="tf" style="margin:0 6px 0 0">✓</span>Mandó sus métricas en tiempo y forma: capturas de estadísticas enviadas el 19 nov antes de las 4:00 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado. Quien no lleva la marca no participa en el premio.</p>
+    <p class="tfn"><span class="tf" style="margin:0 6px 0 0">✓</span>Mandó sus métricas en tiempo y forma: capturas de estadísticas enviadas el 19 nov a más tardar a las 4:40 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado. Quien no lleva la marca no participa en el premio.</p>
     <div class="ctl">
       <button class="chip on" type="button" data-tier="all">Todos</button>
       <button class="chip" type="button" data-tier="A">Tier A</button>
@@ -483,7 +483,7 @@ html.hg-lock,html.hg-lock body{overflow:hidden!important}
     <h2>Cómo se leen estos números</h2>
     <p>Las visualizaciones, likes, comentarios y compartidos salen de leer cada reel en Instagram: el 18 nov 2026, 5:40 p. m. (hora de CDMX) para la mayoría, y el 19 nov, de madrugada, para Sandy, Diego y Javier. Para 33 RPs (16 de tier A, 5 de tier B, 7 de tier C y 5 de tier D) se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov (entre 11:45 a. m. y 4:34 p. m.): son los números de su propia cuenta, por eso ya no hay likes ocultos en esos reels. Es una sola foto: todavía no hay comparación de crecimiento entre lecturas. Los seguidores salen del perfil público de cada RP el mismo día de su lectura (Instagram redondea las cifras grandes). Las entregas, los formularios y las fechas comprometidas salen de la base de RPs en Notion y del portal. El plan es de 54 RPs: tier A 20, B 15, C 12 y D 7.</p>
     <p>Compromiso: un RP cuenta como comprometido desde el día que respondió el formulario con compromiso. Si no hay fecha del formulario se usa el día que publicó, o su fecha comprometida. Los pendientes son los comprometidos que todavía no entregan. Los que aparecen en rojo no han entregado: a unos ya se les venció la fecha y otros no se comprometieron.</p>
-    <p>La marca ✓ junto al nombre es para quien mandó sus métricas en tiempo y forma: capturas de estadísticas enviadas el 19 nov antes de las 4:00 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado. Hoy son 26 de los 33 que mandaron capturas. No llevan marca quienes mandaron después de las 4:00 p. m.; en la tarjeta de cada uno se explica por qué. Ingenioso dio por buenos los casos de Vianey, Anahí, Paloma y Nereyda aunque sus capturas llegaron incompletas o sin hora o link. Sin la marca no se participa en el premio.</p>
+    <p>La marca ✓ junto al nombre es para quien mandó sus métricas en tiempo y forma: capturas de estadísticas enviadas el 19 nov a más tardar a las 4:40 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado. Hoy son 33 de los 33 que mandaron capturas (la última llegó a las 4:34 p. m.). No llevan marca los que no mandaron capturas ni los que mandan después de las 4:40 p. m.; en la tarjeta de cada uno se explica por qué. Ingenioso dio por buenos los casos de Vianey, Anahí, Paloma y Nereyda aunque sus capturas llegaron incompletas o sin hora o link. Sin la marca no se participa en el premio.</p>
   </section>
 
   <div class="ov" id="rpov" hidden>
@@ -972,7 +972,9 @@ dash.draw('n_no', (el) => {
 dash.draw('n_tf', (el) => {
   const r = dash.data('rps');
   const e = el.dataset.estado || 'ok';
-  el.textContent = r.status === 'ok' ? String(r.data.filter((x) => x.tf_estado === e).length) : '—';
+  const n = r.status === 'ok' ? r.data.filter((x) => x.tf_estado === e).length : null;
+  el.textContent = n == null ? '—' : String(n);
+  if (e === 'tarde') { const c = el.closest('.chip'); if (c) c.style.display = n === 0 ? 'none' : ''; }
 });
 
 dash.draw('tabla', (tb) => {
@@ -1106,7 +1108,7 @@ dash.draw('rp_card', (box) => {
     const mot = String(r.tf_motivo || '').replace(/\.$/, '');
     const ini = hr ? 'Capturas enviadas el 19 nov a las ' + hr + ' · ' : '';
     const txt = est === 'ok' ? (ini ? ini + 'en tiempo y forma' : 'En tiempo y forma') + ': participa en el premio.'
-      : est === 'tarde' ? ini + 'fuera de plazo, después de las 4:00\u00a0p.\u00a0m.: no participa en el premio.'
+      : est === 'tarde' ? ini + 'fuera de plazo, después de las 4:40\u00a0p.\u00a0m.: no participa en el premio.'
       : 'No mandó sus capturas de métricas: no participa en el premio.';
     hl.append('p').attr('class', 'tfn' + (est === 'ok' ? ' ok' : '')).text(txt);
   }

@@ -116,8 +116,9 @@
     "nuevos_seguidores": 1,
     "tiempo_prom_s": 6
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
-   "tf_estado": "tarde"
+   "tf_motivo": "enviadas antes de las 4:40 p. m. (el límite pasó de las 4:00 a las 4:40)",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   },
   {
    "rp": "Henry Azmitia",
@@ -291,8 +292,9 @@
     "tiempo_prom_s": 8,
     "nota": "Reel en colaboración con hangargymmx"
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
-   "tf_estado": "tarde"
+   "tf_motivo": "enviadas antes de las 4:40 p. m. (el límite pasó de las 4:00 a las 4:40)",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   },
   {
    "rp": "Karla Miranda",
@@ -472,7 +474,7 @@
    "tier": "A",
    "sucursal": "Gemelos",
    "publicado": "2026-11-13",
-   "usuario": null,
+   "usuario": "gmz.nereyda",
    "reel": "https://vt.tiktok.com/ZSp97Tkm3/",
    "seg_ig": 5000,
    "seg_tt": 1000,
@@ -900,8 +902,9 @@
     "nuevos_seguidores": 1,
     "tiempo_prom_s": 9
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
-   "tf_estado": "tarde"
+   "tf_motivo": "enviadas antes de las 4:40 p. m. (el límite pasó de las 4:00 a las 4:40)",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   },
   {
    "rp": "Karla Rosado",
@@ -974,8 +977,9 @@
     "nuevos_seguidores": 3,
     "tiempo_prom_s": 6
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
-   "tf_estado": "tarde"
+   "tf_motivo": "enviadas antes de las 4:40 p. m. (el límite pasó de las 4:00 a las 4:40)",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   },
   {
    "rp": "Mia Sánchez",
@@ -1312,8 +1316,9 @@
     "tiempo_prom_s": 12,
     "nota": "Reel en colaboración con hangargymmx. La gráfica de sus capturas empieza el 11 nov y los números son mucho más altos que la lectura del 18 nov (4,399 views, 137 me gusta, 18 comentarios, 5 compartidos): falta confirmar que es el mismo reel."
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
-   "tf_estado": "tarde"
+   "tf_motivo": "enviadas antes de las 4:40 p. m. (el límite pasó de las 4:00 a las 4:40)",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   },
   {
    "rp": "Scarlett",
@@ -1356,8 +1361,9 @@
     "tiempo_prom_s": 17,
     "nota": "Su link no abría; con las capturas se pudo leer el reel. La gráfica empieza el 9 nov y el panel tiene el 7 nov como fecha de publicación."
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
-   "tf_estado": "tarde"
+   "tf_motivo": "enviadas antes de las 4:40 p. m. (el límite pasó de las 4:00 a las 4:40)",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   },
   {
    "rp": "Olga Chacón",
@@ -1529,8 +1535,9 @@
     "tiempo_prom_s": 10,
     "nota": "Reel en colaboración con hangargymmx"
    },
-   "tf_motivo": "fuera de plazo, después de las 4:00 p. m.",
-   "tf_estado": "tarde"
+   "tf_motivo": "enviadas antes de las 4:40 p. m. (el límite pasó de las 4:00 a las 4:40)",
+   "tf_estado": "ok",
+   "a_tiempo_forma": true
   },
   {
    "rp": "Chris Hernández",
@@ -1902,9 +1909,9 @@
    "rp": "Paloma Morales",
    "nombre": "Paloma Morales Perera",
    "tier": "C",
-   "sucursal": null,
+   "sucursal": "Gemelos",
    "publicado": "2026-11-19",
-   "usuario": null,
+   "usuario": "mora.x077",
    "reel": null,
    "seg_ig": null,
    "seg_tt": null,
@@ -2071,9 +2078,9 @@
    "rp": "Anahí",
    "nombre": "Anahí Carrillo",
    "tier": "D",
-   "sucursal": null,
+   "sucursal": "Arenas",
    "publicado": "2026-11-19",
-   "usuario": null,
+   "usuario": "anahicarrillo",
    "reel": null,
    "seg_ig": null,
    "seg_tt": null,
@@ -2135,7 +2142,7 @@
   },
   {
    "label": "En tiempo y forma",
-   "value": "26 de los 33 RPs que mandaron capturas lo hicieron en tiempo y forma (14 de tier A, 3 de tier B, 6 de tier C y 3 de tier D): capturas enviadas el 19 nov antes de las 4:00 p. m. y con el reel identificado. Sin esta marca no se participa en el premio. Quedan sin marca por mandar después de las 4:00 p. m.: Eli, Lilia, Scarlett, Miranda Hernández, Faumery, Juan Andrés y Karen Mayo. Ingenioso confirmó que Vianey, Anahí, Paloma y Nereyda sí aplican, aunque sus capturas llegaron incompletas o sin hora o link."
+   "value": "Los 33 RPs que mandaron capturas lo hicieron en tiempo y forma (16 de tier A, 5 de tier B, 7 de tier C y 5 de tier D): capturas de estadísticas enviadas el 19 nov a más tardar a las 4:40 p. m. (el límite se movió de las 4:00 a las 4:40; la última llegó a las 4:34 p. m.), con views, me gusta, comentarios y compartidos legibles y el reel identificado. Sin esta marca no se participa en el premio. Ingenioso dio por buenos los casos de Vianey, Anahí, Paloma y Nereyda aunque sus capturas llegaron incompletas o sin hora o link. Sin marca quedan los 9 que entregaron y no mandaron capturas (Aritzy, Ingrid, Citlalli, Karla Rosado, Mia, Nicol, Omar, Daniela y Diego) y los 12 que no entregaron."
   }
  ]
 }
