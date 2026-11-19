@@ -253,8 +253,8 @@
    "seg_ig": 5000,
    "seg_tt": 1000,
    "leido": true,
-   "vistas": 10862,
-   "likes": 3,
+   "vistas": 10874,
+   "likes": 88,
    "comentarios": 4,
    "compartidos": 4,
    "motivo": null,
@@ -272,8 +272,17 @@
    "seguidores": 8087,
    "siguiendo": 1839,
    "publicaciones": 70,
-   "likes_ocultos": true,
-   "likes_vistos": 87
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "16:34",
+    "espectadores": 6002,
+    "guardados": 3,
+    "reposts": 8,
+    "nuevos_seguidores": 10,
+    "tiempo_prom_s": 8,
+    "nota": "Reel en colaboración con hangargymmx"
+   }
   },
   {
    "rp": "Karla Miranda",
@@ -827,8 +836,8 @@
    "seg_ig": 1000,
    "seg_tt": 1000,
    "leido": true,
-   "vistas": 1098,
-   "likes": 3,
+   "vistas": 1099,
+   "likes": 40,
    "comentarios": 3,
    "compartidos": 1,
    "motivo": null,
@@ -846,8 +855,16 @@
    "seguidores": 2784,
    "siguiendo": 2232,
    "publicaciones": 52,
-   "likes_ocultos": true,
-   "likes_vistos": 40
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "16:30",
+    "espectadores": 617,
+    "guardados": 1,
+    "reposts": 3,
+    "nuevos_seguidores": 1,
+    "tiempo_prom_s": 9
+   }
   },
   {
    "rp": "Karla Rosado",
@@ -2024,7 +2041,7 @@
  "meta": [
   {
    "label": "Fuente",
-   "value": "Lectura de Instagram (reel por reel) con la sesión del usuario: 18 nov 2026, 5:40 p. m. (hora CDMX) para la mayoría y 19 nov 2026, ~1:30 a. m. para Sandy, Diego y Javier; lista de RPs y fechas de publicación desde Notion. Para 31 RPs (15 de tier A, 4 de tier B, 7 de tier C y 5 de tier D) se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov 2026 (entre 11:45 a. m. y 4:23 p. m.)"
+   "value": "Lectura de Instagram (reel por reel) con la sesión del usuario: 18 nov 2026, 5:40 p. m. (hora CDMX) para la mayoría y 19 nov 2026, ~1:30 a. m. para Sandy, Diego y Javier; lista de RPs y fechas de publicación desde Notion. Para 33 RPs (16 de tier A, 5 de tier B, 7 de tier C y 5 de tier D) se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov 2026 (entre 11:45 a. m. y 4:34 p. m.)"
   },
   {
    "label": "Guiones",
@@ -2044,7 +2061,7 @@
   },
   {
    "label": "Capturas de los RPs",
-   "value": "31 RPs mandaron capturas de su reel el 19 nov 2026: 15 de tier A (de 20), 4 de tier B (Eddy, Vianey, Chris y Lilia), 7 de tier C y 5 de tier D. Con ellas se corrigieron views, likes, comentarios y compartidos, se resolvieron los likes ocultos de Miranda Becerra (154), Sandy Cámara (30) y Faumery Cardiel (127) y se leyeron los reels de Eddy, Vianey y Scarlett, que no se podían abrir. Vianey mandó capturas de su perfil y del reel, sin pantalla de estadísticas. Paloma Morales publicó su reel hoy, 19 nov, como a las 2:50 p. m.; no mandó link ni usuario y se cuenta como entregado hasta confirmar que es el reel de la campaña. Anahí Carrillo mandó solo la pantalla de me gusta y views (4 me gusta, 47 views), sin fecha ni link, y también se cuenta como entregada hasta confirmar. Las capturas de Miranda Hernández muestran 13,065 views contra 4,399 de la lectura del 18 nov y una gráfica que empieza el 11 nov: falta confirmar que es el mismo reel. En tier A faltan Aritzy, Ingrid y Karen Mayo (entregaron, no mandaron) y Chris y Lurline (no entregaron)."
+   "value": "33 RPs mandaron capturas de su reel el 19 nov 2026: 16 de tier A (de 20), 5 de tier B (Eddy, Vianey, Chris, Lilia y Juan Andrés), 7 de tier C y 5 de tier D. Con ellas se corrigieron views, likes, comentarios y compartidos, se resolvieron los likes ocultos de Miranda Becerra (154), Sandy Cámara (30), Faumery Cardiel (127), Karen Mayo (88) y Juan Andrés Acopa (40) y se leyeron los reels de Eddy, Vianey y Scarlett, que no se podían abrir. Vianey mandó capturas de su perfil y del reel, sin pantalla de estadísticas. Paloma Morales publicó su reel hoy, 19 nov, como a las 2:50 p. m.; no mandó link ni usuario y se cuenta como entregado hasta confirmar que es el reel de la campaña. Anahí Carrillo mandó solo la pantalla de me gusta y views (4 me gusta, 47 views), sin fecha ni link, y también se cuenta como entregada hasta confirmar. Las capturas de Miranda Hernández muestran 13,065 views contra 4,399 de la lectura del 18 nov y una gráfica que empieza el 11 nov: falta confirmar que es el mismo reel. En tier A faltan Aritzy e Ingrid (entregaron, no mandaron) y Chris y Lurline (no entregaron)."
   }
  ]
 }

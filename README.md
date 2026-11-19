@@ -23,7 +23,7 @@ O abre `index.html` en el navegador. Funciona sin servidor y sin conexión: los 
 ## De dónde salen los números
 
 - Lectura de cada reel en Instagram el 18 y 19 de noviembre de 2026.
-- Para 31 RPs (15 de tier A, 4 de tier B, 7 de tier C y 5 de tier D), las capturas de estadísticas que ellos mismos mandaron el 19 de noviembre (entre 11:45 a. m. y 4:23 p. m.). Son los números de su propia cuenta.
+- Para 33 RPs (16 de tier A, 5 de tier B, 7 de tier C y 5 de tier D), las capturas de estadísticas que ellos mismos mandaron el 19 de noviembre (entre 11:45 a. m. y 4:34 p. m.). Son los números de su propia cuenta.
 - Seguidores, siguiendo y publicaciones del perfil público de cada RP. Instagram redondea las cifras grandes.
 
 ## Datos de personas
