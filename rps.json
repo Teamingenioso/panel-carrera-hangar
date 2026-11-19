@@ -1061,7 +1061,7 @@
    "seg_ig": 1000,
    "seg_tt": 0,
    "leido": true,
-   "vistas": 3086,
+   "vistas": 3088,
    "likes": 44,
    "comentarios": 1,
    "compartidos": 6,
@@ -1079,7 +1079,17 @@
    "estado": "Entregó",
    "seguidores": 1987,
    "siguiendo": 366,
-   "publicaciones": 2
+   "publicaciones": 2,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "14:14",
+    "espectadores": 1902,
+    "guardados": 2,
+    "reposts": 11,
+    "nuevos_seguidores": 1,
+    "tiempo_prom_s": 4
+   }
   },
   {
    "rp": "Claudia Marín",
@@ -1092,8 +1102,8 @@
    "seg_ig": 5000,
    "seg_tt": 0,
    "leido": true,
-   "vistas": 9915,
-   "likes": 173,
+   "vistas": 9935,
+   "likes": 174,
    "comentarios": 6,
    "compartidos": 2,
    "motivo": null,
@@ -1110,7 +1120,18 @@
    "estado": "Entregó",
    "seguidores": 5931,
    "siguiendo": 9210,
-   "publicaciones": 1880
+   "publicaciones": 1880,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "12:09",
+    "espectadores": 4977,
+    "guardados": 7,
+    "reposts": 0,
+    "nuevos_seguidores": 3,
+    "tiempo_prom_s": 9,
+    "nota": "Reel en colaboración con hangargymmx"
+   }
   },
   {
    "rp": "Cristian Tosca",
@@ -1123,7 +1144,7 @@
    "seg_ig": 1000,
    "seg_tt": 0,
    "leido": true,
-   "vistas": 6474,
+   "vistas": 6482,
    "likes": 43,
    "comentarios": 2,
    "compartidos": 9,
@@ -1141,7 +1162,18 @@
    "estado": "Entregó",
    "seguidores": 1780,
    "siguiendo": 1779,
-   "publicaciones": 89
+   "publicaciones": 89,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "12:09",
+    "espectadores": 3667,
+    "guardados": 5,
+    "reposts": 6,
+    "nuevos_seguidores": 1,
+    "tiempo_prom_s": 9,
+    "nota": "Reel en colaboración con hangargymmx"
+   }
   },
   {
    "rp": "Daniela Alamilla",
@@ -1247,8 +1279,8 @@
    "seg_ig": 0,
    "seg_tt": 0,
    "leido": true,
-   "vistas": 1531,
-   "likes": 47,
+   "vistas": 1538,
+   "likes": 49,
    "comentarios": 13,
    "compartidos": 1,
    "motivo": null,
@@ -1265,7 +1297,17 @@
    "estado": "Entregó",
    "seguidores": 736,
    "siguiendo": 185,
-   "publicaciones": 9
+   "publicaciones": 9,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "11:54",
+    "espectadores": 632,
+    "guardados": 5,
+    "reposts": 7,
+    "nuevos_seguidores": 0,
+    "tiempo_prom_s": 10
+   }
   },
   {
    "rp": "Valeria Aguirre",
@@ -1278,7 +1320,7 @@
    "seg_ig": 1000,
    "seg_tt": 0,
    "leido": true,
-   "vistas": 3042,
+   "vistas": 3054,
    "likes": 101,
    "comentarios": 14,
    "compartidos": 1,
@@ -1296,7 +1338,17 @@
    "estado": "Entregó",
    "seguidores": 3745,
    "siguiendo": 3016,
-   "publicaciones": 82
+   "publicaciones": 82,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "11:45",
+    "espectadores": 1180,
+    "guardados": 0,
+    "reposts": 4,
+    "nuevos_seguidores": 0,
+    "tiempo_prom_s": 8
+   }
   },
   {
    "rp": "Ferchis",
@@ -1718,17 +1770,17 @@
    "nombre": "Paloma Morales Perera",
    "tier": "C",
    "sucursal": null,
-   "publicado": null,
+   "publicado": "2026-11-19",
    "usuario": null,
    "reel": null,
    "seg_ig": null,
    "seg_tt": null,
-   "leido": false,
-   "vistas": null,
-   "likes": null,
-   "comentarios": null,
-   "compartidos": null,
-   "motivo": "No ha entregado",
+   "leido": true,
+   "vistas": 186,
+   "likes": 7,
+   "comentarios": 0,
+   "compartidos": 0,
+   "motivo": null,
    "respondio": "2026-10-14",
    "comprometido": null,
    "prorroga": null,
@@ -1737,12 +1789,23 @@
    "reel_habitual": null,
    "stories": null,
    "guion": null,
-   "entregado": false,
+   "entregado": true,
    "se_comprometio": false,
-   "estado": "No se comprometió",
+   "estado": "Entregó",
    "seguidores": null,
    "siguiendo": null,
-   "publicaciones": null
+   "publicaciones": null,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "15:52",
+    "espectadores": 70,
+    "guardados": 0,
+    "reposts": 0,
+    "nuevos_seguidores": 0,
+    "tiempo_prom_s": 17,
+    "nota": "Reel publicado hoy 19 nov (como a las 2:50 p. m., por la gráfica de la primera hora). No mandó link ni usuario; falta confirmar que es el reel de la campaña."
+   }
   },
   {
    "rp": "Vanessa Rivera",
@@ -1903,7 +1966,7 @@
  "meta": [
   {
    "label": "Fuente",
-   "value": "Lectura de Instagram (reel por reel) con la sesión del usuario: 18 nov 2026, 5:40 p. m. (hora CDMX) para la mayoría y 19 nov 2026, ~1:30 a. m. para Sandy, Diego y Javier; lista de RPs y fechas de publicación desde Notion. Para 19 RPs (15 de tier A y 4 de tier B) se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov 2026 (entre 11:45 a. m. y 4:23 p. m.)"
+   "value": "Lectura de Instagram (reel por reel) con la sesión del usuario: 18 nov 2026, 5:40 p. m. (hora CDMX) para la mayoría y 19 nov 2026, ~1:30 a. m. para Sandy, Diego y Javier; lista de RPs y fechas de publicación desde Notion. Para 25 RPs (15 de tier A, 4 de tier B y 6 de tier C) se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov 2026 (entre 11:45 a. m. y 4:23 p. m.)"
   },
   {
    "label": "Guiones",
@@ -1919,11 +1982,11 @@
   },
   {
    "label": "No entregaron",
-   "value": "14 RPs del plan de 54 todavía sin video; el estado se calcula con la fecha comprometida o la prórroga, al 19 nov 2026"
+   "value": "13 RPs del plan de 54 todavía sin video; el estado se calcula con la fecha comprometida o la prórroga, al 19 nov 2026"
   },
   {
    "label": "Capturas de los RPs",
-   "value": "19 RPs mandaron capturas de su reel el 19 nov 2026: 15 de tier A (de 20) y 4 de tier B (Eddy, Vianey, Chris y Lilia). Con ellas se corrigieron views, likes, comentarios y compartidos, se resolvieron los likes ocultos de Miranda Becerra (154) y Sandy Cámara (30) y se leyeron los reels de Eddy y Vianey, que no se podían abrir. Vianey mandó capturas de su perfil y del reel, sin pantalla de estadísticas. En tier A faltan Aritzy, Ingrid y Karen Mayo (entregaron, no mandaron) y Chris y Lurline (no entregaron)."
+   "value": "25 RPs mandaron capturas de su reel el 19 nov 2026: 15 de tier A (de 20), 4 de tier B (Eddy, Vianey, Chris y Lilia) y 6 de tier C (Valeria, Esperanza, Cristian, Claudia, Angie y Paloma). Con ellas se corrigieron views, likes, comentarios y compartidos, se resolvieron los likes ocultos de Miranda Becerra (154) y Sandy Cámara (30) y se leyeron los reels de Eddy y Vianey, que no se podían abrir. Vianey mandó capturas de su perfil y del reel, sin pantalla de estadísticas. Paloma Morales publicó su reel hoy, 19 nov, como a las 2:50 p. m.; no mandó link ni usuario y se cuenta como entregado hasta confirmar que es el reel de la campaña. En tier A faltan Aritzy, Ingrid y Karen Mayo (entregaron, no mandaron) y Chris y Lurline (no entregaron)."
   }
  ]
 }
