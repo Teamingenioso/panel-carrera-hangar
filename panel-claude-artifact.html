@@ -118,6 +118,14 @@ html.hg-lock,html.hg-lock body{overflow:hidden!important}
 .hg .gz h5:first-child{margin-top:0}
 .hg .gz p{margin:0 0 8px;color:rgba(255,255,255,.86)}
 .hg .chip.red{border-color:#ff6b5a;color:#ff6b5a}
+.hg .tf{display:inline-block;flex:none;margin-left:6px;width:1.15em;height:1.15em;line-height:1.15em;border-radius:50%;background:var(--yellow);color:#000;font-size:.68rem;font-weight:800;text-align:center;font-style:normal;vertical-align:middle}
+.hg .tag.tf{width:auto;height:auto;line-height:normal;margin:0 0 0 6px;padding:3px 10px;border-radius:999px;font-size:.66rem;letter-spacing:.08em;background:var(--yellow);color:#000;border-color:var(--yellow)}
+.hg .chip.tfc{border-color:var(--yellow);color:var(--yellow)}
+.hg .chip.tfc.on{background:var(--yellow);color:#000}
+.hg .tfn{margin:6px 0 0;color:rgba(255,255,255,.62);font-size:.8rem}
+.hg .rk .nm{display:flex;align-items:center;min-width:0}
+.hg .rk .nm .lk{flex:0 1 auto;min-width:0}
+.hg .rk .nm i{flex:none}
 .hg .chip.red.on{background:#ff6b5a;border-color:#ff6b5a;color:#000}
 .hg .tag.red{border-color:#ff6b5a;color:#ff6b5a}
 .hg tr.no td,.hg tr.no .lk{color:#ff6b5a}
@@ -316,12 +324,14 @@ html.hg-lock,html.hg-lock body{overflow:hidden!important}
   <section class="card sec" id="detalle">
     <h2>Detalle por persona</h2>
     <p class="note" style="margin-top:6px">Toca un nombre para abrir su tarjeta con todos sus datos.</p>
+    <p class="tfn"><span class="tf" style="margin:0 6px 0 0">✓</span>Mandó sus métricas en tiempo y forma: capturas de estadísticas enviadas el 19 nov antes de las 4:00 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado.</p>
     <div class="ctl">
       <button class="chip on" type="button" data-tier="all">Todos</button>
       <button class="chip" type="button" data-tier="A">Tier A</button>
       <button class="chip" type="button" data-tier="B">Tier B</button>
       <button class="chip" type="button" data-tier="C">Tier C</button>
       <button class="chip" type="button" data-tier="D">Tier D</button>
+      <button class="chip tfc" type="button" data-tier="tf">✓ En tiempo y forma (<span data-draw="n_tf" data-source="rps">—</span>)</button>
       <button class="chip red" type="button" data-tier="no">No entregaron (<span data-draw="n_no" data-source="rps">—</span>)</button>
       <select class="dash-select" id="orden" aria-label="Ordenar por">
         <option value="vistas">Ordenar: visualizaciones</option>
@@ -359,6 +369,7 @@ html.hg-lock,html.hg-lock body{overflow:hidden!important}
     <h2>Cómo se leen estos números</h2>
     <p>Las visualizaciones, likes, comentarios y compartidos salen de leer cada reel en Instagram: el 18 nov 2026, 5:40 p. m. (hora de CDMX) para la mayoría, y el 19 nov, de madrugada, para Sandy, Diego y Javier. Para 33 RPs (16 de tier A, 5 de tier B, 7 de tier C y 5 de tier D) se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov (entre 11:45 a. m. y 4:34 p. m.): son los números de su propia cuenta, por eso ya no hay likes ocultos en esos reels. Es una sola foto: todavía no hay comparación de crecimiento entre lecturas. Los seguidores salen del perfil público de cada RP el mismo día de su lectura (Instagram redondea las cifras grandes). Las entregas, los formularios y las fechas comprometidas salen de la base de RPs en Notion y del portal. El plan es de 54 RPs: tier A 20, B 15, C 12 y D 7.</p>
     <p>Compromiso: un RP cuenta como comprometido desde el día que respondió el formulario con compromiso. Si no hay fecha del formulario se usa el día que publicó, o su fecha comprometida. Los pendientes son los comprometidos que todavía no entregan. Los que aparecen en rojo no han entregado: a unos ya se les venció la fecha y otros no se comprometieron.</p>
+    <p>La marca ✓ junto al nombre es para quien mandó sus métricas en tiempo y forma: capturas de estadísticas enviadas el 19 nov antes de las 4:00 p. m., con views, me gusta, comentarios y compartidos legibles y el reel identificado. Hoy son 22 de los 33 que mandaron capturas. No llevan marca quienes mandaron después de las 4:00 p. m., ni quienes mandaron capturas incompletas o sin confirmar; en la tarjeta de cada uno se explica por qué.</p>
   </section>
 
   <div class="ov" id="rpov" hidden>
@@ -591,7 +602,13 @@ function openRP(name, ev) {
     if (x) x.focus({ preventScroll: true });
   });
 }
-const nameBtn = (sel, name) => sel.append('button').attr('class', 'lk').attr('type', 'button').text(name).on('click', (ev) => openRP(name, ev));
+const tfOK = (name) => { const r = dash.data('rps'); return !!(r && r.status === 'ok' && r.data.some((x) => x.rp === name && x.a_tiempo_forma)); };
+const nameBtn = (sel, name) => {
+  const b = sel.append('button').attr('class', 'lk').attr('type', 'button').text(name).on('click', (ev) => openRP(name, ev));
+  if (tfOK(name)) sel.append('span').attr('class', 'tf').attr('title', 'Mandó sus métricas en tiempo y forma').attr('aria-label', 'Mandó sus métricas en tiempo y forma').text('✓');
+  return b;
+};
+const h12 = (h) => { const m = /^(\d{1,2}):(\d{2})$/.exec(h || ''); if (!m) return null; const H = +m[1]; return ((H % 12) || 12) + ':' + m[2] + (H < 12 ? ' a. m.' : ' p. m.'); };
 const SNAP_DAY = '2026-11-18';
 const okAll = (...ids) => ids.every((id) => dash.data(id).status === 'ok');
 const failMsg = (el, ...ids) => { el.textContent = ids.some((id) => dash.data(id).status === 'error') ? 'No cargó' : '—'; };
@@ -810,11 +827,16 @@ dash.draw('n_no', (el) => {
   el.textContent = r.status === 'ok' ? String(r.data.filter((x) => !x.entregado).length) : '—';
 });
 
+dash.draw('n_tf', (el) => {
+  const r = dash.data('rps');
+  el.textContent = r.status === 'ok' ? String(r.data.filter((x) => x.a_tiempo_forma).length) : '—';
+});
+
 dash.draw('tabla', (tb) => {
   const r = dash.data('rps');
   if (!okAll('rps')) { tb.replaceChildren(); return; }
   const key = state.sort;
-  const rows = r.data.filter((x) => state.tier === 'all' || (state.tier === 'no' ? !x.entregado : x.tier === state.tier)).slice().sort((a, b) => {
+  const rows = r.data.filter((x) => state.tier === 'all' || (state.tier === 'no' ? !x.entregado : state.tier === 'tf' ? !!x.a_tiempo_forma : x.tier === state.tier)).slice().sort((a, b) => {
     if (key === 'publicado') return (b.publicado || '').localeCompare(a.publicado || '');
     const av = a[key], bv = b[key];
     if (av == null && bv == null) return 0;
@@ -925,8 +947,11 @@ dash.draw('rp_card', (box) => {
   const h = s.append('div').attr('class', 'mh');
   const hl = h.append('div');
   hl.append('span').attr('class', r.entregado ? 'tag' : 'tag red').text('Tier ' + r.tier + (r.entregado ? '' : ' · no entregó'));
+  if (r.a_tiempo_forma) hl.append('span').attr('class', 'tag tf').text('✓ En tiempo y forma');
   hl.append('h3').text(r.rp);
   hl.append('p').text(r.nombre);
+  if (r.captura && h12(r.captura.hora)) hl.append('p').attr('class', 'tfn').text('Capturas enviadas el 19 nov a las ' + h12(r.captura.hora) + (r.a_tiempo_forma ? ' · en tiempo y forma.' : (r.tf_motivo ? ' · ' + r.tf_motivo : '.')));
+  else if (r.tf_motivo) hl.append('p').attr('class', 'tfn').text(r.tf_motivo);
   h.append('button').attr('class', 'x').attr('type', 'button').attr('aria-label', 'Cerrar tarjeta').text('×').on('click', closeRP);
   const ms = s.append('div').attr('class', 'ms');
   const cell = (cls, lab, val) => { const d = ms.append('div').attr('class', cls); d.append('small').text(lab); if (val != null) d.append('b').text(val); return d; };
