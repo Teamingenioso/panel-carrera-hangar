@@ -1217,10 +1217,10 @@
    "seg_ig": 10000,
    "seg_tt": 0,
    "leido": true,
-   "vistas": 4399,
-   "likes": 137,
-   "comentarios": 18,
-   "compartidos": 5,
+   "vistas": 13065,
+   "likes": 163,
+   "comentarios": 12,
+   "compartidos": 27,
    "motivo": null,
    "respondio": "2026-10-14",
    "comprometido": "2026-11-09",
@@ -1235,7 +1235,18 @@
    "estado": "Entregó",
    "seguidores": 16000,
    "siguiendo": 588,
-   "publicaciones": 18
+   "publicaciones": 18,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "16:16",
+    "espectadores": 5728,
+    "guardados": 29,
+    "reposts": 8,
+    "nuevos_seguidores": 18,
+    "tiempo_prom_s": 12,
+    "nota": "Reel en colaboración con hangargymmx. La gráfica de sus capturas empieza el 11 nov y los números son mucho más altos que la lectura del 18 nov (4,399 views, 137 me gusta, 18 comentarios, 5 compartidos): falta confirmar que es el mismo reel."
+   }
   },
   {
    "rp": "Scarlett",
@@ -1247,12 +1258,12 @@
    "reel": "https://www.instagram.com/reel/DfixLuPAp_le1XcL7806irFCZcSwdB7jXEFDzE0/",
    "seg_ig": null,
    "seg_tt": null,
-   "leido": false,
-   "vistas": null,
-   "likes": null,
-   "comentarios": null,
-   "compartidos": null,
-   "motivo": "link inválido",
+   "leido": true,
+   "vistas": 392,
+   "likes": 12,
+   "comentarios": 3,
+   "compartidos": 0,
+   "motivo": null,
    "respondio": "2026-11-06",
    "comprometido": "2026-11-07",
    "prorroga": null,
@@ -1266,7 +1277,18 @@
    "estado": "Entregó",
    "seguidores": null,
    "siguiendo": null,
-   "publicaciones": null
+   "publicaciones": null,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "16:09",
+    "espectadores": 169,
+    "guardados": 1,
+    "reposts": 0,
+    "nuevos_seguidores": 0,
+    "tiempo_prom_s": 17,
+    "nota": "Su link no abría; con las capturas se pudo leer el reel. La gráfica empieza el 9 nov y el panel tiene el 7 nov como fecha de publicación."
+   }
   },
   {
    "rp": "Olga Chacón",
@@ -1361,8 +1383,8 @@
    "seg_ig": 1000,
    "seg_tt": 0,
    "leido": true,
-   "vistas": 975,
-   "likes": 72,
+   "vistas": 1004,
+   "likes": 74,
    "comentarios": 2,
    "compartidos": 0,
    "motivo": null,
@@ -1379,7 +1401,17 @@
    "estado": "Entregó",
    "seguidores": 2003,
    "siguiendo": 997,
-   "publicaciones": 55
+   "publicaciones": 55,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "15:15",
+    "espectadores": 499,
+    "guardados": 0,
+    "reposts": 0,
+    "nuevos_seguidores": 0,
+    "tiempo_prom_s": 15
+   }
   },
   {
    "rp": "Fau",
@@ -1392,8 +1424,8 @@
    "seg_ig": null,
    "seg_tt": null,
    "leido": true,
-   "vistas": 7715,
-   "likes": 3,
+   "vistas": 7845,
+   "likes": 127,
    "comentarios": 4,
    "compartidos": 7,
    "motivo": null,
@@ -1411,8 +1443,17 @@
    "seguidores": 1864,
    "siguiendo": 1342,
    "publicaciones": 44,
-   "likes_ocultos": true,
-   "likes_vistos": 100
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "16:18",
+    "espectadores": 3767,
+    "guardados": 6,
+    "reposts": 7,
+    "nuevos_seguidores": 3,
+    "tiempo_prom_s": 10,
+    "nota": "Reel en colaboración con hangargymmx"
+   }
   },
   {
    "rp": "Chris Hernández",
@@ -1714,7 +1755,7 @@
    "seg_ig": null,
    "seg_tt": null,
    "leido": true,
-   "vistas": 2525,
+   "vistas": 2544,
    "likes": 24,
    "comentarios": 1,
    "compartidos": 0,
@@ -1732,7 +1773,18 @@
    "estado": "Entregó",
    "seguidores": 1041,
    "siguiendo": 6695,
-   "publicaciones": 2609
+   "publicaciones": 2609,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "14:47",
+    "espectadores": 1221,
+    "guardados": 0,
+    "reposts": 1,
+    "nuevos_seguidores": 0,
+    "tiempo_prom_s": 5,
+    "nota": "Reel en colaboración con hangargymmx"
+   }
   },
   {
    "rp": "Monserrat López",
@@ -1936,17 +1988,17 @@
    "nombre": "Anahí Carrillo",
    "tier": "D",
    "sucursal": null,
-   "publicado": null,
+   "publicado": "2026-11-19",
    "usuario": null,
    "reel": null,
    "seg_ig": null,
    "seg_tt": null,
-   "leido": false,
-   "vistas": null,
-   "likes": null,
+   "leido": true,
+   "vistas": 47,
+   "likes": 4,
    "comentarios": null,
    "compartidos": null,
-   "motivo": "No ha entregado",
+   "motivo": null,
    "respondio": "2026-11-06",
    "comprometido": "2026-11-10",
    "prorroga": "2026-11-11",
@@ -1955,18 +2007,24 @@
    "reel_habitual": null,
    "stories": null,
    "guion": "## “El running era el último de mi lista”\nHe probado mil deportes. Menos este. Jelou. Llevo muchos años en el gym y siempre lo combino con otra cosa. Pero el running era el último de mi lista. Cuando Hangar anunció su carrera, pensé: bueno, en algún momento me iba a tocar. Y como no me gusta sufrir sola, ya inscribí a mis amigas.\nEs el 22 de noviembre. Comenta CARRERA y te mando el link. Ven con tus amigas.\n## “¿A qué kilómetro empezamos a caminar?”\nMis amigas no hacen ejercicio. Y ya están entrenando para el 22. Holi. Cada vez que empiezo algo nuevo me da miedo y quiero ser experta de un día para otro. Pero ya aprendí que con práctica se logra. Yo tampoco soy la más runner, así que a ver cómo acabamos todos. Lo que quiero saber es si mis amigas y yo sobrevivimos, o a qué kilómetro empezamos a caminar.\nComenta CARRERA y te mando el link. Corre, camina… lo importante es llegar.",
-   "entregado": false,
+   "entregado": true,
    "se_comprometio": true,
-   "estado": "Venció el 11 nov",
+   "estado": "Entregó",
    "seguidores": null,
    "siguiendo": null,
-   "publicaciones": null
+   "publicaciones": null,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "13:55",
+    "nota": "Mandó una sola captura, la pantalla de me gusta y views: 4 me gusta y 47 views, sin la pantalla de estadísticas. No muestra fecha ni link; falta confirmar que es el reel de la campaña."
+   }
   }
  ],
  "meta": [
   {
    "label": "Fuente",
-   "value": "Lectura de Instagram (reel por reel) con la sesión del usuario: 18 nov 2026, 5:40 p. m. (hora CDMX) para la mayoría y 19 nov 2026, ~1:30 a. m. para Sandy, Diego y Javier; lista de RPs y fechas de publicación desde Notion. Para 25 RPs (15 de tier A, 4 de tier B y 6 de tier C) se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov 2026 (entre 11:45 a. m. y 4:23 p. m.)"
+   "value": "Lectura de Instagram (reel por reel) con la sesión del usuario: 18 nov 2026, 5:40 p. m. (hora CDMX) para la mayoría y 19 nov 2026, ~1:30 a. m. para Sandy, Diego y Javier; lista de RPs y fechas de publicación desde Notion. Para 31 RPs (15 de tier A, 4 de tier B, 7 de tier C y 5 de tier D) se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov 2026 (entre 11:45 a. m. y 4:23 p. m.)"
   },
   {
    "label": "Guiones",
@@ -1974,7 +2032,7 @@
   },
   {
    "label": "Sin lectura",
-   "value": "2 reels entregados sin lectura de views: Scarlett (link inválido) y Daniela (reel no disponible)"
+   "value": "1 reel entregado sin lectura de views: Daniela (reel no disponible)"
   },
   {
    "label": "Perfiles",
@@ -1982,11 +2040,11 @@
   },
   {
    "label": "No entregaron",
-   "value": "13 RPs del plan de 54 todavía sin video; el estado se calcula con la fecha comprometida o la prórroga, al 19 nov 2026"
+   "value": "12 RPs del plan de 54 todavía sin video; el estado se calcula con la fecha comprometida o la prórroga, al 19 nov 2026"
   },
   {
    "label": "Capturas de los RPs",
-   "value": "25 RPs mandaron capturas de su reel el 19 nov 2026: 15 de tier A (de 20), 4 de tier B (Eddy, Vianey, Chris y Lilia) y 6 de tier C (Valeria, Esperanza, Cristian, Claudia, Angie y Paloma). Con ellas se corrigieron views, likes, comentarios y compartidos, se resolvieron los likes ocultos de Miranda Becerra (154) y Sandy Cámara (30) y se leyeron los reels de Eddy y Vianey, que no se podían abrir. Vianey mandó capturas de su perfil y del reel, sin pantalla de estadísticas. Paloma Morales publicó su reel hoy, 19 nov, como a las 2:50 p. m.; no mandó link ni usuario y se cuenta como entregado hasta confirmar que es el reel de la campaña. En tier A faltan Aritzy, Ingrid y Karen Mayo (entregaron, no mandaron) y Chris y Lurline (no entregaron)."
+   "value": "31 RPs mandaron capturas de su reel el 19 nov 2026: 15 de tier A (de 20), 4 de tier B (Eddy, Vianey, Chris y Lilia), 7 de tier C y 5 de tier D. Con ellas se corrigieron views, likes, comentarios y compartidos, se resolvieron los likes ocultos de Miranda Becerra (154), Sandy Cámara (30) y Faumery Cardiel (127) y se leyeron los reels de Eddy, Vianey y Scarlett, que no se podían abrir. Vianey mandó capturas de su perfil y del reel, sin pantalla de estadísticas. Paloma Morales publicó su reel hoy, 19 nov, como a las 2:50 p. m.; no mandó link ni usuario y se cuenta como entregado hasta confirmar que es el reel de la campaña. Anahí Carrillo mandó solo la pantalla de me gusta y views (4 me gusta, 47 views), sin fecha ni link, y también se cuenta como entregada hasta confirmar. Las capturas de Miranda Hernández muestran 13,065 views contra 4,399 de la lectura del 18 nov y una gráfica que empieza el 11 nov: falta confirmar que es el mismo reel. En tier A faltan Aritzy, Ingrid y Karen Mayo (entregaron, no mandaron) y Chris y Lurline (no entregaron)."
   }
  ]
 }
