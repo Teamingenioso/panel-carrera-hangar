@@ -714,7 +714,7 @@
    "seg_ig": 0,
    "seg_tt": 0,
    "leido": true,
-   "vistas": 6167,
+   "vistas": 6186,
    "likes": 102,
    "comentarios": 54,
    "compartidos": 59,
@@ -732,7 +732,17 @@
    "estado": "Entregó",
    "seguidores": 176,
    "siguiendo": 331,
-   "publicaciones": 49
+   "publicaciones": 49,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "14:08",
+    "espectadores": 3082,
+    "guardados": 5,
+    "reposts": 15,
+    "nuevos_seguidores": 10,
+    "tiempo_prom_s": 11
+   }
   },
   {
    "rp": "Citlalli Marín",
@@ -771,16 +781,16 @@
    "tier": "B",
    "sucursal": "Gemelos",
    "publicado": "2026-11-06",
-   "usuario": null,
+   "usuario": "bebocho.esc",
    "reel": "https://www.instagram.com/reel/DfaiYe_JJBY/",
    "seg_ig": 1000,
    "seg_tt": 0,
-   "leido": false,
-   "vistas": null,
-   "likes": null,
-   "comentarios": null,
-   "compartidos": null,
-   "motivo": "cuenta privada",
+   "leido": true,
+   "vistas": 11638,
+   "likes": 179,
+   "comentarios": 12,
+   "compartidos": 20,
+   "motivo": null,
    "respondio": "2026-10-14",
    "comprometido": "2026-11-08",
    "prorroga": null,
@@ -792,9 +802,19 @@
    "entregado": true,
    "se_comprometio": true,
    "estado": "Entregó",
-   "seguidores": null,
-   "siguiendo": null,
-   "publicaciones": null
+   "seguidores": 1250,
+   "siguiendo": 96,
+   "publicaciones": null,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "12:01",
+    "espectadores": 6818,
+    "guardados": 15,
+    "reposts": 7,
+    "nuevos_seguidores": 15,
+    "tiempo_prom_s": 9
+   }
   },
   {
    "rp": "Juan Andrés Acopa",
@@ -871,7 +891,7 @@
    "seg_ig": 1000,
    "seg_tt": 5000,
    "leido": true,
-   "vistas": 7843,
+   "vistas": 7855,
    "likes": 71,
    "comentarios": 2,
    "compartidos": 6,
@@ -889,7 +909,17 @@
    "estado": "Entregó",
    "seguidores": 4139,
    "siguiendo": 612,
-   "publicaciones": 43
+   "publicaciones": 43,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas de Instagram enviadas por el RP",
+    "hora": "16:23",
+    "espectadores": 3566,
+    "guardados": 1,
+    "reposts": 1,
+    "nuevos_seguidores": 3,
+    "tiempo_prom_s": 6
+   }
   },
   {
    "rp": "Mia Sánchez",
@@ -990,16 +1020,16 @@
    "tier": "B",
    "sucursal": "Arenas",
    "publicado": "2026-11-06",
-   "usuario": null,
+   "usuario": "viane_av",
    "reel": "https://www.instagram.com/reel/Dfay3_uxaqQwtnANm5iN7B3pAsl1pMgJtX1Wdo0/",
    "seg_ig": 5000,
    "seg_tt": 5000,
-   "leido": false,
-   "vistas": null,
-   "likes": null,
-   "comentarios": null,
-   "compartidos": null,
-   "motivo": "link inválido",
+   "leido": true,
+   "vistas": 5401,
+   "likes": 122,
+   "comentarios": 2,
+   "compartidos": 1,
+   "motivo": null,
    "respondio": null,
    "comprometido": "2026-11-01",
    "prorroga": null,
@@ -1011,9 +1041,14 @@
    "entregado": true,
    "se_comprometio": true,
    "estado": "Entregó",
-   "seguidores": null,
-   "siguiendo": null,
-   "publicaciones": null
+   "seguidores": 9576,
+   "siguiendo": 1703,
+   "publicaciones": null,
+   "captura": {
+    "fecha": "2026-11-19",
+    "fuente": "Capturas del reel y de su perfil enviadas por el RP (sin pantalla de estadísticas)",
+    "hora": "14:29"
+   }
   },
   {
    "rp": "Angie Marcela",
@@ -1868,7 +1903,7 @@
  "meta": [
   {
    "label": "Fuente",
-   "value": "Lectura de Instagram (reel por reel) con la sesión del usuario: 18 nov 2026, 5:40 p. m. (hora CDMX) para la mayoría y 19 nov 2026, ~1:30 a. m. para Sandy, Diego y Javier; lista de RPs y fechas de publicación desde Notion. Para 15 RPs de tier A se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov 2026 (entre 11:45 a. m. y 4:17 p. m.)"
+   "value": "Lectura de Instagram (reel por reel) con la sesión del usuario: 18 nov 2026, 5:40 p. m. (hora CDMX) para la mayoría y 19 nov 2026, ~1:30 a. m. para Sandy, Diego y Javier; lista de RPs y fechas de publicación desde Notion. Para 19 RPs (15 de tier A y 4 de tier B) se usan las capturas de estadísticas que ellos mismos mandaron el 19 nov 2026 (entre 11:45 a. m. y 4:23 p. m.)"
   },
   {
    "label": "Guiones",
@@ -1876,11 +1911,11 @@
   },
   {
    "label": "Sin lectura",
-   "value": "4 reels entregados sin lectura de views: Vianey y Scarlett (link inválido), Eddy (cuenta privada) y Daniela (reel no disponible)"
+   "value": "2 reels entregados sin lectura de views: Scarlett (link inválido) y Daniela (reel no disponible)"
   },
   {
    "label": "Perfiles",
-   "value": "Seguidores, siguiendo y publicaciones leídos del perfil público de Instagram de 35 RPs entre el 18 y el 19 nov 2026. Instagram redondea las cifras grandes (por ejemplo 37 mil)."
+   "value": "Seguidores, siguiendo y publicaciones leídos del perfil público de Instagram de 37 RPs entre el 18 y el 19 nov 2026. Instagram redondea las cifras grandes (por ejemplo 37 mil)."
   },
   {
    "label": "No entregaron",
@@ -1888,7 +1923,7 @@
   },
   {
    "label": "Capturas de los RPs",
-   "value": "15 de 20 RPs de tier A mandaron capturas de las estadísticas de su reel el 19 nov 2026. Con ellas se corrigieron views, likes, comentarios y compartidos, y se resolvieron los likes ocultos de Miranda Becerra (154) y Sandy Cámara (30). Faltan Aritzy, Ingrid y Karen Mayo (entregaron, no mandaron) y Chris y Lurline (no entregaron)."
+   "value": "19 RPs mandaron capturas de su reel el 19 nov 2026: 15 de tier A (de 20) y 4 de tier B (Eddy, Vianey, Chris y Lilia). Con ellas se corrigieron views, likes, comentarios y compartidos, se resolvieron los likes ocultos de Miranda Becerra (154) y Sandy Cámara (30) y se leyeron los reels de Eddy y Vianey, que no se podían abrir. Vianey mandó capturas de su perfil y del reel, sin pantalla de estadísticas. En tier A faltan Aritzy, Ingrid y Karen Mayo (entregaron, no mandaron) y Chris y Lurline (no entregaron)."
   }
  ]
 }
